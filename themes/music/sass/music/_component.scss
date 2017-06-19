@@ -1,0 +1,177 @@
+// Feature blocks
+// ----------------
+.feature {
+	.block-title {
+		border-bottom: 2px solid $gray-lighter;
+		padding-bottom: .25em;
+		font-weight: 300;
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
+// List of links blocks
+.list-links {
+	ul {
+		list-style: none;
+		padding-left: 0;
+		ul {
+			padding-left: 1.5em;
+			margin-top: .25em;
+		}
+	}
+	li {
+		margin-bottom: .25em;
+		font-size: 14px;
+	}
+	.field li:before {
+		// Add font awesome chevron-right
+		content: "\f054";
+		font-family: FontAwesome;
+		margin-right: .5em;
+		color: $warm-gray;
+		font-size: 12px;
+	}
+}
+.list-links,
+.feature {
+	.block-title:before {
+		font-family: FontAwesome;
+		color: $cornell-red;
+		font-size: 80%;
+		margin-right: .25em;
+	}
+}
+.list-links--resources {
+	// Font Awesome: database
+	.block-title:before {
+		content: "\f1c0";	
+	}
+}
+.list-links--services {
+	// Font Awesome: handshake-o
+	.block-title:before {
+		content: "\f2b5";
+	}
+}
+.list-links--blog {
+	.block-title:before {
+		content: "\f19a";
+	}
+}
+.feature--hours {
+	.block-title:before {
+		content: "\f017";
+	}
+	h3 {
+		margin-top: 0;
+	}
+	i {
+		margin-left: .25em;
+		font-size: 90%;
+	}
+}
+.sidebar {
+	.feature--hours {
+		h3 {
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		h3:before {
+			font-family: FontAwesome;
+			margin-right: .5em;
+			color: $cornell-red;
+			content: "\f017";
+		}
+		p {
+			margin: 1em 0;
+			font-size: 110%;
+		}
+	}
+}
+.hours-col-loc {
+	display: none !important;
+}
+.hours-col-time {
+	font-size: 16px;
+}
+.feature--home {
+	text-align: center;
+	margin: 2.5em 0;
+}
+
+// Footer
+// --------
+.footer-block {
+	margin-top: 2em;
+}
+
+// Wells
+// --------
+.well {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+// Buttons
+// --------
+.btn-math {
+	background: $cornell-red;
+	border-color: $cornell-red;
+	color: white;
+	font-family: $font-family-cul;
+	text-transform: uppercase;
+	font-size: 14px
+	i {
+		margin-left: .5em;
+	}
+}
+.btn-math:hover,
+.btn-math:active,
+.btn-math:focus {
+	background: $red-dark;
+	border-color: $red-dark;
+	color: white;
+}
+
+// Breadcrumbs
+// --------------
+.breadcrumb {
+	background-color: inherit;
+	padding: 0;
+	font-size: 12px;
+}
+
+// MEDIA QUERIES
+// -------------------------
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+	.feature {
+		.block-title {
+			font-size: 20px;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md) {
+	.feature {
+		.block-title {
+			font-size: 26px;
+		}
+	}
+}
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: $screen-lg) {
+	.feature {
+		.block-title {
+			font-size: 30px;
+		}
+	}
+}

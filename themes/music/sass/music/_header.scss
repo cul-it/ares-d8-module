@@ -1,0 +1,109 @@
+// Header
+.search-header {
+	background: $gray-lighter;
+}
+
+// Hero
+// ---------
+.hero {
+	background-color: $warm-gray-dark;
+	.navbar {
+		background: $gray-dark;
+		background: rgba(34, 34, 34, 0.85);
+		border: 0;
+		border-radius: 0;
+	}
+}
+
+// Global menu
+.global-menu {
+	.nav {
+		float: right;
+	}
+	li {
+		float: left;
+		font-size: 12px;
+	}
+	a {
+		color: white;
+		text-transform: uppercase;
+	}
+	a:hover {
+		background: $cornell-red;
+	}
+	.nav > li > a {
+		padding: 14px 15px;
+	}
+	.nav > li > a:hover {
+		background: $gray-dark;
+	}
+	// Library Catalog link
+	li:first-child {
+		a {
+			background: $red-dark;
+		}
+		// a:hover {
+		// 	background: $gray-dark;
+		// }
+	}
+}
+
+// Search link
+// ------------
+.search-link {
+	a {
+		color: $gray-dark;
+		background: white;
+		background: rgba(255, 255, 255, 0.95);
+		padding: 10px 12px;
+		font-size: 14px;
+		display: inline-block;
+		font-family: $font-family-cul;
+		text-transform: uppercase;
+	}
+	i {
+		margin-left: .5em;
+		color: $cornell-red;
+	}
+	.visible-xs i {
+		margin-left: 0;
+	}
+}
+
+// MEDIA QUERIES
+// -------------------------
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+	.hero {
+		background: url("../images/hero/1.jpg") no-repeat;
+		-webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		background-size: cover !important;
+		background-position: 50% 50% !important;
+	}
+}
+
+// /* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md) {
+// 	.feature {
+// 		.block-title {
+// 			font-size: 24px;
+// 			i {
+// 				font-size: 24px;
+// 			}
+// 		}
+// 	}
+// }
+// /* Large devices (desktops, 1200px and up) */
+// @media (min-width: $screen-lg) {
+// 	.feature {
+// 		.block-title {
+// 			font-size: 26px;
+// 			i {
+// 				font-size: 36px;
+// 			}
+// 		}
+// 	}
+// }

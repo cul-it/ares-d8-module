@@ -1,0 +1,127 @@
+// Main content
+// --------------
+.main-content {
+	background: white;
+}
+
+
+// Home page
+// ------------
+// Hide page title
+.path-frontpage {
+	.page-header {
+		display: none;
+	}
+}
+
+// Home page feature blocks
+.feature {
+	@include make-sm-column(4);
+	margin-bottom: 2em;
+}
+
+// Collected Works
+// ----------------
+.view-collected-works {
+	.views-field-nothing {
+		width: 20%;
+	}
+}
+
+
+// Math footer
+// -------------
+.footer_math {
+	background: $warm-gray-light;
+	padding: 2em 0;
+	h2 {
+		font-family: $font-family-cul;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-top: 0;
+	}
+	h3 {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: 0;
+	}
+	a {
+		color: $link-primary;
+		text-decoration: underline
+	}
+	i {
+		color: $cornell-red;
+	}
+	li, p {
+		font-size: 12px;
+	}
+}
+
+// CUL footer
+// -------------
+footer {
+	padding: 2em  0;
+	font-size: 12px;
+	h2 {
+		font-family: $font-family-cul;
+		text-transform: uppercase;
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	p:last-child {
+	 	margin-bottom: 1em;
+	}
+}
+
+// Search page
+// -------------
+.well--search {
+	margin-top: 2em;
+	.form-group {
+		margin-bottom: 0;
+	}
+}
+
+
+// MEDIA QUERIES
+// -------------------------
+
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm) {
+// 	.sidebar {
+// 		margin-top: 0;
+// 	}
+// 	.feature {
+// 		.block-title {
+// 			font-size: 18px;
+// 			i {
+// 				font-size: 18px;
+// 			}
+// 		}
+// 	}
+// }
+
+// /* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md) {
+// 	.feature {
+// 		.block-title {
+// 			font-size: 24px;
+// 			i {
+// 				font-size: 24px;
+// 			}
+// 		}
+// 	}
+// }
+// /* Large devices (desktops, 1200px and up) */
+// @media (min-width: $screen-lg) {
+// 	.feature {
+// 		.block-title {
+// 			font-size: 26px;
+// 			i {
+// 				font-size: 36px;
+// 			}
+// 		}
+// 	}
+// }

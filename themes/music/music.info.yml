@@ -1,0 +1,34 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Music'
+description: 'Music theme using Bootstrap Sass'
+package: 'Bootstrap'
+
+regions:
+  cornell: 'Cornell brand'
+  secondary_links: 'Secondary links'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  search: 'Search'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer_music: 'Music Footer'
+  footer: 'CUL Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  home_banner: 'Home banner'
+  home_feature1: 'Home feature 1'
+  home_feature2: 'Home feature 2'
+  home_feature3: 'Home feature 3'
+  home_feature3: 'Home feature 4'
+
+libraries:
+  - 'music/global-styling'
+  - 'music/bootstrap-scripts'
+  - 'music/fonts'

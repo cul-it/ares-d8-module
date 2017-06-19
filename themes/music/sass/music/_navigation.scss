@@ -1,0 +1,142 @@
+// Top nav bar 
+// --------------
+header.navbar {
+	min-height: auto;
+}
+.sf-menu {
+	a {
+		color: white;
+		font-size: 16px;
+	}
+	a:hover {
+		text-decoration: none;
+		background: rgba(0, 0, 0, 1);
+	}
+	ul {
+		background: $gray-dark;
+		a {
+			font-size: 14px;
+		}
+	}
+	.is-active {
+		background: rgba(0, 0, 0, 1);
+	}
+	a.menuparent:after {
+		content: "\f078";
+		font-family: FontAwesome;
+		margin-left: .5em;
+		font-size: 90%;
+	}
+}
+// Don't add a duplicated chevron on mobile accordion nav
+.sf-menu.sf-accordion {
+	ul {
+		a.menuparent:after {
+			content: "";
+			margin-left: 0;
+		}
+	}
+}
+ul.sf-menu li:hover > ul,
+ul.sf-menu li.sfHover > ul {
+	top: 3.4em;
+}
+
+// Sidebar menu
+// --------------
+.sidebar {
+	h2 {
+		font-size: 14px;
+		color: $cornell-red;
+		text-transform: uppercase;
+		margin-top: 0;
+		font-weight: 700;
+	}
+	.navbar-nav {
+		float: none;
+		border: 1px dotted $warm-gray;
+		margin-bottom: 2em;
+		li {
+			float: none;
+		}
+		a {
+			border-top: 1px dotted $warm-gray;
+		}
+		li:first-child {
+			a {
+				border-top: 0;
+			}
+		}
+	}
+	.navbar-nav > li > a {
+		padding: 10px;
+	}
+	.block {
+		margin-bottom: 2em;
+	}
+
+}
+
+// Mobile menu button
+// -------------------
+.sf-accordion-toggle {
+	padding: 10px 15px;
+	a {
+		color: white;
+		text-transform: uppercase;
+		display: block;
+	}
+	a:after {
+		font-family: FontAwesome;
+		content: "\f0c9";
+		margin-left: .5em;
+		font-size: 90%;
+	}
+	a:hover, a:active, a:focus {
+		text-decoration: none;
+	}
+}
+
+// Math footer nav
+// -----------------
+.footer_math {
+	li {
+		float: none;
+	}
+	.nav > li > a {
+		padding: 3px 0;
+		color: $link-primary;
+		text-decoration: underline;
+	}
+	.nav > li > a:hover {
+		background: inherit;
+	}
+}
+
+// Collected Works A-Z index
+// ---------------------------
+.works-index {
+	margin-bottom: 1em;
+	a {
+		background: $border-color;
+		margin-bottom: 4px;
+	}
+}
+
+// MEDIA QUERIES
+// -------------------------
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+	header.navbar {
+		padding-left: 0;
+	}
+}
+
+// /* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md) {
+// }
+// /* Large devices (desktops, 1200px and up) */
+// @media (min-width: $screen-lg) {
+// }
+
