@@ -1,3 +1,30 @@
+// Secondary links
+// ----------------
+.secondary-links {	
+	.nav {
+		float: right;
+		background: $gray-pale;
+		margin-bottom: 2em;
+		li {
+			float: left;
+		}
+		a {
+			font-size: 14px;
+			color: $dark-gray;
+		}
+		a:hover {
+			background: $teal;
+			color: white;
+		}
+
+	}
+}
+
+// .region-search {
+// 	clear: both;
+// }
+
+
 // Top nav bar 
 // --------------
 header.navbar {

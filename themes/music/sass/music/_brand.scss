@@ -1,9 +1,9 @@
 // Cornell brand
-.cornell-brand {
-	.container {
-		background: $cornell-red;
-	}
-}
+// .cornell-brand {
+// 	.container {
+// 		background: $cornell-red;
+// 	}
+// }
 
 // Library brand
 .library-brand {
@@ -11,25 +11,32 @@
 }
 .culbrand {
 	font-family: $font-family-cul;
-	color: white;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 	display: block;
 }
-.culbrand:hover,
-.culbrand:active,
-.culbrand:visited,
-.culbrand:focus {
-	color: white;
+.culbrand:hover {
 	text-decoration: none;
 }
-.culbrand--cul {
-	font-size: 16px;
+.culbrand--cul,
+.culbrand--cul:hover {
+	font-size: 20px;
 	display: inline-block;
+	color: $medium-gray;
+	margin-top: .3em;
 }
-.culbrand--math {
+.culbrand--music,
+.culbrand--music:hover {
 	text-transform: uppercase;
 	font-size: 26px;
 	line-height: 1.1em;
+	color: $dark-gray;
+}
+.cu-insignia {
+	float: left;
+	margin-right: 1em;
+	img {
+		width: 100px;
+		height: auto;
+	}
 }
 
 // MEDIA QUERIES
@@ -37,16 +44,16 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm) {
-	.library-brand {
-		margin: 3em 0;
-	}
-	.culbrand--cul {
-		font-size: 20px;
-	}
-	.culbrand--math {
-		font-size: 40px;
-		line-height: 1.1em;
-	}
+	// .library-brand {
+	// 	margin: 3em 0;
+	// }
+	// .culbrand--cul {
+	// 	font-size: 20px;
+	// }
+	// .culbrand--music {
+	// 	font-size: 40px;
+	// 	line-height: 1.1em;
+	// }
 }
 
 // /* Medium devices (desktops, 992px and up) */
