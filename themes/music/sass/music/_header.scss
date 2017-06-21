@@ -5,15 +5,9 @@
 
 // Hero
 // ---------
-.hero {
-	background-color: $warm-gray-dark;
-	.navbar {
-		background: $gray-dark;
-		background: rgba(34, 34, 34, 0.85);
-		border: 0;
-		border-radius: 0;
-	}
-}
+// .hero {
+// 	background-color: $warm-gray-dark;
+// }
 
 // Global menu
 .global-menu {
@@ -76,7 +70,7 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm) {
 	.hero {
-		background: url("../images/hero/1.jpg") no-repeat;
+		background: url("../images/windows.jpg") no-repeat;
 		-webkit-background-size: cover !important;
 		-moz-background-size: cover !important;
 		-o-background-size: cover !important;

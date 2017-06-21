@@ -6373,14 +6373,6 @@ body {
 .search-header {
   background: #eeeeee; }
 
-.hero {
-  background-color: #5b554c; }
-  .hero .navbar {
-    background: #222222;
-    background: rgba(34, 34, 34, 0.85);
-    border: 0;
-    border-radius: 0; }
-
 .global-menu .nav {
   float: right; }
 .global-menu li {
@@ -6416,7 +6408,7 @@ body {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .hero {
-    background: url("../images/hero/1.jpg") no-repeat;
+    background: url("../images/windows.jpg") no-repeat;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
@@ -6435,26 +6427,38 @@ body {
     background: #64afb8;
     color: white; }
 
+.navigation-bar {
+  background: white;
+  border-bottom: 10px solid #f2efee; }
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0; }
+
 header.navbar {
   min-height: auto; }
 
+#superfish-main {
+  margin-left: 6.5em; }
+
 .sf-menu a {
-  color: white;
+  color: #222222;
   font-size: 16px; }
 .sf-menu a:hover {
   text-decoration: none;
-  background: black; }
-.sf-menu ul {
-  background: #222222; }
-  .sf-menu ul a {
-    font-size: 14px; }
+  background: #f2efee; }
+.sf-menu ul a {
+  font-size: 14px;
+  background: #f2efee; }
 .sf-menu .is-active {
-  background: black; }
+  background: #f2efee; }
 .sf-menu a.menuparent:after {
   content: "\f078";
   font-family: FontAwesome;
   margin-left: .5em;
-  font-size: 90%; }
+  font-size: 90%;
+  color: #64afb8; }
 
 .sf-menu.sf-accordion ul a.menuparent:after {
   content: "";

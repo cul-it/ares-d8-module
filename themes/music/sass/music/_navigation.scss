@@ -27,32 +27,45 @@
 
 // Top nav bar 
 // --------------
+.navigation-bar {
+	background: white;
+	border-bottom: 10px solid $gray-pale;
+}
+.navbar {
+	margin-bottom: 0;
+	border: 0;
+	border-radius: 0;
+}
 header.navbar {
 	min-height: auto;
 }
+#superfish-main {
+	margin-left: 6.5em;
+}
 .sf-menu {
 	a {
-		color: white;
+		color: $gray-dark;
 		font-size: 16px;
 	}
 	a:hover {
 		text-decoration: none;
-		background: rgba(0, 0, 0, 1);
+		background: $gray-pale;
 	}
 	ul {
-		background: $gray-dark;
 		a {
 			font-size: 14px;
+			background: $gray-pale;
 		}
 	}
 	.is-active {
-		background: rgba(0, 0, 0, 1);
+		background: $gray-pale;
 	}
 	a.menuparent:after {
 		content: "\f078";
 		font-family: FontAwesome;
 		margin-left: .5em;
 		font-size: 90%;
+		color: $teal;
 	}
 }
 // Don't add a duplicated chevron on mobile accordion nav
