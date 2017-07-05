@@ -121,17 +121,19 @@
       {# Home banner content #}
       {% if page.home_search %}
         <div class="home-banner">
-          <div class="well">
-            <div class="row">
-              <div class="col-sm-4">
-                {{ page.home_about }}
+          <div class="container">
+            <div class="well">
+              <div class="row">
+                <div class="col-sm-4">
+                  {{ page.home_about }}
+                </div>
+                <div class="col-sm-4 home-search">
+                  {{ page.home_search }}
+                  {{ page.home_reserves }}
+                </div>
               </div>
-              <div class="col-sm-4 home-search">
-                {{ page.home_search }}
-                {{ page.home_reserves }}
-              </div>
-            </div>
-          </div> 
+            </div> 
+          </div>
         </div>
       {% endif %}
     </div>
