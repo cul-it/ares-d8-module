@@ -6346,10 +6346,13 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
+.navbar-default {
+  background: white; }
+
 body {
   margin-top: 0;
   font-family: "Roboto", Helvetica, sans-serif;
-  background: white; }
+  background: #201015; }
 
 .main-text a, .home-banner a {
   color: #222222;
@@ -6522,6 +6525,9 @@ ul.sf-menu li.sfHover > ul {
 @media (min-width: 768px) {
   header.navbar {
     padding-left: 0; } }
+.cornell-brand {
+  background: white; }
+
 .library-brand {
   margin: 1em 0; }
 
@@ -6561,6 +6567,9 @@ ul.sf-menu li.sfHover > ul {
 .path-frontpage .page-header {
   display: none; }
 
+.home-primary {
+  margin-bottom: 2em; }
+
 .feature {
   position: relative;
   min-height: 1px;
@@ -6575,30 +6584,46 @@ ul.sf-menu li.sfHover > ul {
 .view-collected-works .views-field-nothing {
   width: 20%; }
 
-.footer_math {
-  background: #c0b7a9;
+.footer-music {
+  color: white;
+  background: #6a3846;
+  background: #6a3846;
+  background: -moz-linear-gradient(top, #6a3846 0%, #371c24 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #6a3846), color-stop(100%, #371c24));
+  background: -webkit-linear-gradient(top, #6a3846 0%, #371c24 100%);
+  background: -o-linear-gradient(top, #6a3846 0%, #371c24 100%);
+  background: -ms-linear-gradient(top, #6a3846 0%, #371c24 100%);
+  background: linear-gradient(to bottom, #6a3846 0%, #371c24 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$burgundy', endColorstr='$dark-burgundy', GradientType=0 );
   padding: 2em 0; }
-  .footer_math h2 {
+  .footer-music h2 {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     font-size: 18px;
     margin-top: 0; }
-  .footer_math h3 {
+  .footer-music h3 {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 0; }
-  .footer_math a {
-    color: #333333;
+  .footer-music a {
+    color: white;
     text-decoration: underline; }
-  .footer_math i {
+  .footer-music i {
     color: #b31b1b; }
-  .footer_math li, .footer_math p {
+  .footer-music li, .footer-music p {
     font-size: 12px; }
+  .footer-music .well {
+    background: #623441;
+    border: 0;
+    margin-top: 3em; }
+    .footer-music .well h2 {
+      font-size: 16px; }
 
 footer {
   padding: 2em  0;
-  font-size: 12px; }
+  font-size: 12px;
+  color: white; }
   footer h2 {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
@@ -6607,6 +6632,9 @@ footer {
     margin-bottom: 1em; }
   footer p:last-child {
     margin-bottom: 1em; }
+  footer a {
+    color: white;
+    text-decoration: underline; }
 
 .well--search {
   margin-top: 2em; }
@@ -6630,6 +6658,19 @@ footer {
   padding-left: 2em;
   padding-bottom: 1em; }
 
+.catalog-search {
+  margin-bottom: 2em; }
+  .catalog-search .form-group {
+    width: 100%; }
+  .catalog-search .input-group {
+    width: 80%; }
+  .catalog-search .btn {
+    background: none; }
+  .catalog-search .glyphicon {
+    font-size: 20px;
+    color: #888183;
+    padding-top: 0; }
+
 .list-links ul {
   list-style: none;
   padding-left: 0; }
@@ -6645,6 +6686,14 @@ footer {
   margin-right: .5em;
   color: #64afb8;
   font-size: 12px; }
+
+.region-search .btn {
+  background: none;
+  border: 0;
+  padding-top: 4px; }
+.region-search .glyphicon {
+  color: #64afb8;
+  font-size: 24px; }
 
 .footer-block {
   margin-top: 2em; }

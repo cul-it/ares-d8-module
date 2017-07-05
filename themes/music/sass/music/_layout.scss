@@ -14,6 +14,9 @@
 		display: none;
 	}
 }
+.home-primary {
+	margin-bottom: 2em;
+}
 
 // Home page feature blocks
 .feature {
@@ -30,10 +33,19 @@
 }
 
 
-// Math footer
+// Music footer
 // -------------
-.footer_math {
-	background: $warm-gray-light;
+.footer-music {
+	color: white;
+	background: $burgundy;
+	background: rgba(106,56,70,1);
+	background: -moz-linear-gradient(top, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(106,56,70,1)), color-stop(100%, rgba(55,28,36,1)));
+	background: -webkit-linear-gradient(top, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
+	background: -o-linear-gradient(top, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
+	background: -ms-linear-gradient(top, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
+	background: linear-gradient(to bottom, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$burgundy', endColorstr='$dark-burgundy', GradientType=0 );
 	padding: 2em 0;
 	h2 {
 		font-family: $font-family-cul;
@@ -48,7 +60,7 @@
 		margin-top: 0;
 	}
 	a {
-		color: $link-primary;
+		color: white;
 		text-decoration: underline
 	}
 	i {
@@ -57,6 +69,14 @@
 	li, p {
 		font-size: 12px;
 	}
+	.well {
+		background: #623441;
+		border: 0;
+		margin-top: 3em;
+		h2 {
+			font-size: 16px;
+		}
+	}
 }
 
 // CUL footer
@@ -64,6 +84,7 @@
 footer {
 	padding: 2em  0;
 	font-size: 12px;
+	color: white;
 	h2 {
 		font-family: $font-family-cul;
 		text-transform: uppercase;
@@ -73,6 +94,10 @@ footer {
 	}
 	p:last-child {
 	 	margin-bottom: 1em;
+	}
+	a {
+		color: white;
+		text-decoration: underline;
 	}
 }
 

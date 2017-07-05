@@ -20,6 +20,23 @@
 	padding-left: 2em;
 	padding-bottom: 1em;
 }
+.catalog-search {
+	margin-bottom: 2em;
+	.form-group {
+		width: 100%;
+	}
+	.input-group {
+		width: 80%;
+	}
+	.btn {
+		background: none;
+	}
+	.glyphicon {
+		font-size: 20px;
+		color: $medium-gray;
+		padding-top: 0;
+	}
+}
 
 // .feature {
 // 	.block-title {
@@ -125,6 +142,20 @@
 // 	text-align: center;
 // 	margin: 2.5em 0;
 // }
+
+// Top search box
+// -----------------
+.region-search {
+	.btn {
+		background: none;
+		border: 0;
+		padding-top: 4px;
+	}
+	.glyphicon {
+		color: $teal;
+		font-size: 24px;
+	}
+}
 
 // Footer
 // --------

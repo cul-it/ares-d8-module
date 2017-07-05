@@ -127,7 +127,7 @@
                 <div class="col-sm-4">
                   {{ page.home_about }}
                 </div>
-                <div class="col-sm-4 home-search">
+                <div class="col-sm-8 home-search">
                   {{ page.home_search }}
                   {{ page.home_reserves }}
                 </div>
@@ -208,13 +208,13 @@
           {% if page.home_feature1 %}
             <div class="home-content">
               <div class="container">
-                <div class="row">
+                <div class="row home-primary">
                     {{ page.home_feature1 }}
                     {% if page.home_feature2 %}
                       {{ page.home_feature2 }}
                     {% endif %}
                 </div>
-                <div class="row">
+                <div class="row home-secondary">
                   {% if page.home_feature3 %}
                     {{ page.home_feature3 }}
                   {% endif %}
