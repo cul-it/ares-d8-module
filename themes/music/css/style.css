@@ -6351,7 +6351,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   background: white; }
 
-.main-text a {
+.main-text a, .home-banner a {
   color: #222222;
   text-decoration: underline; }
 
@@ -6555,7 +6555,8 @@ ul.sf-menu li.sfHover > ul {
 
 /* Small devices (tablets, 768px and up) */
 .main-content {
-  background: white; }
+  background: white;
+  padding-top: 2em; }
 
 .path-frontpage .page-header {
   display: none; }
@@ -6613,15 +6614,21 @@ footer {
     margin-bottom: 0; }
 
 /* Small devices (tablets, 768px and up) */
-.feature .block-title {
-  border-bottom: 2px solid #eeeeee;
-  padding-bottom: .25em;
-  font-weight: 300;
-  font-size: 28px; }
-.feature h3 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase; }
+.home-banner h2, .home-content h2 {
+  font-size: 24px;
+  color: #6a3846;
+  margin-top: 0; }
+
+.home-banner .well {
+  background: rgba(255, 255, 255, 0.8);
+  border: 0;
+  margin: 2em 0 0 0;
+  padding: 2em 2em 2.5em 2em; }
+
+.home-search {
+  border-left: 1px solid #64afb8;
+  padding-left: 2em;
+  padding-bottom: 1em; }
 
 .list-links ul {
   list-style: none;
@@ -6636,55 +6643,8 @@ footer {
   content: "\f054";
   font-family: FontAwesome;
   margin-right: .5em;
-  color: #a2998b;
+  color: #64afb8;
   font-size: 12px; }
-
-.list-links .block-title:before,
-.feature .block-title:before {
-  font-family: FontAwesome;
-  color: #b31b1b;
-  font-size: 80%;
-  margin-right: .25em; }
-
-.list-links--resources .block-title:before {
-  content: "\f1c0"; }
-
-.list-links--services .block-title:before {
-  content: "\f2b5"; }
-
-.list-links--blog .block-title:before {
-  content: "\f19a"; }
-
-.feature--hours .block-title:before {
-  content: "\f017"; }
-.feature--hours h3 {
-  margin-top: 0; }
-.feature--hours i {
-  margin-left: .25em;
-  font-size: 90%; }
-
-.sidebar .feature--hours h3 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase; }
-.sidebar .feature--hours h3:before {
-  font-family: FontAwesome;
-  margin-right: .5em;
-  color: #b31b1b;
-  content: "\f017"; }
-.sidebar .feature--hours p {
-  margin: 1em 0;
-  font-size: 110%; }
-
-.hours-col-loc {
-  display: none !important; }
-
-.hours-col-time {
-  font-size: 16px; }
-
-.feature--home {
-  text-align: center;
-  margin: 2.5em 0; }
 
 .footer-block {
   margin-top: 2em; }

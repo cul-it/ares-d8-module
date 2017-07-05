@@ -22,11 +22,13 @@ regions:
   footer: 'CUL Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-  home_banner: 'Home banner'
+  home_about: 'Home about'
+  home_search: 'Home search'
+  home_reserves: 'Home reserves'
   home_feature1: 'Home feature 1'
   home_feature2: 'Home feature 2'
   home_feature3: 'Home feature 3'
-  home_feature3: 'Home feature 4'
+  home_feature4: 'Home feature 4'
 
 libraries:
   - 'music/global-styling'

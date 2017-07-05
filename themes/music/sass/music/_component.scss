@@ -1,18 +1,39 @@
-// Feature blocks
+// Home page
 // ----------------
-.feature {
-	.block-title {
-		border-bottom: 2px solid $gray-lighter;
-		padding-bottom: .25em;
-		font-weight: 300;
-		font-size: 28px;
-	}
-	h3 {
-		font-size: 14px;
-		font-weight: 700;
-		text-transform: uppercase;
+.home-banner, .home-content {
+	h2 {
+		font-size: 24px;
+		color: $burgundy;
+		margin-top: 0;
 	}
 }
+.home-banner {
+	.well {
+		background: rgba(255,255,255,.8);
+		border: 0;
+		margin: 2em 0 0 0;
+		padding: 2em 2em 2.5em 2em;
+	}
+}
+.home-search {
+	border-left: 1px solid $teal;
+	padding-left: 2em;
+	padding-bottom: 1em;
+}
+
+// .feature {
+// 	.block-title {
+// 		border-bottom: 2px solid $gray-lighter;
+// 		padding-bottom: .25em;
+// 		font-weight: 300;
+// 		font-size: 28px;
+// 	}
+// 	h3 {
+// 		font-size: 14px;
+// 		font-weight: 700;
+// 		text-transform: uppercase;
+// 	}
+// }
 
 // List of links blocks
 .list-links {
@@ -33,77 +54,77 @@
 		content: "\f054";
 		font-family: FontAwesome;
 		margin-right: .5em;
-		color: $warm-gray;
+		color: $teal;
 		font-size: 12px;
 	}
 }
-.list-links,
-.feature {
-	.block-title:before {
-		font-family: FontAwesome;
-		color: $cornell-red;
-		font-size: 80%;
-		margin-right: .25em;
-	}
-}
-.list-links--resources {
-	// Font Awesome: database
-	.block-title:before {
-		content: "\f1c0";	
-	}
-}
-.list-links--services {
-	// Font Awesome: handshake-o
-	.block-title:before {
-		content: "\f2b5";
-	}
-}
-.list-links--blog {
-	.block-title:before {
-		content: "\f19a";
-	}
-}
-.feature--hours {
-	.block-title:before {
-		content: "\f017";
-	}
-	h3 {
-		margin-top: 0;
-	}
-	i {
-		margin-left: .25em;
-		font-size: 90%;
-	}
-}
-.sidebar {
-	.feature--hours {
-		h3 {
-			font-size: 14px;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
-		h3:before {
-			font-family: FontAwesome;
-			margin-right: .5em;
-			color: $cornell-red;
-			content: "\f017";
-		}
-		p {
-			margin: 1em 0;
-			font-size: 110%;
-		}
-	}
-}
-.hours-col-loc {
-	display: none !important;
-}
-.hours-col-time {
-	font-size: 16px;
-}
-.feature--home {
-	text-align: center;
-	margin: 2.5em 0;
-}
+// .list-links,
+// .feature {
+// 	.block-title:before {
+// 		font-family: FontAwesome;
+// 		color: $cornell-red;
+// 		font-size: 80%;
+// 		margin-right: .25em;
+// 	}
+// }
+// .list-links--resources {
+// 	// Font Awesome: database
+// 	.block-title:before {
+// 		content: "\f1c0";	
+// 	}
+// }
+// .list-links--services {
+// 	// Font Awesome: handshake-o
+// 	.block-title:before {
+// 		content: "\f2b5";
+// 	}
+// }
+// .list-links--blog {
+// 	.block-title:before {
+// 		content: "\f19a";
+// 	}
+// }
+// .feature--hours {
+// 	.block-title:before {
+// 		content: "\f017";
+// 	}
+// 	h3 {
+// 		margin-top: 0;
+// 	}
+// 	i {
+// 		margin-left: .25em;
+// 		font-size: 90%;
+// 	}
+// }
+// .sidebar {
+// 	.feature--hours {
+// 		h3 {
+// 			font-size: 14px;
+// 			font-weight: 700;
+// 			text-transform: uppercase;
+// 		}
+// 		h3:before {
+// 			font-family: FontAwesome;
+// 			margin-right: .5em;
+// 			color: $cornell-red;
+// 			content: "\f017";
+// 		}
+// 		p {
+// 			margin: 1em 0;
+// 			font-size: 110%;
+// 		}
+// 	}
+// }
+// .hours-col-loc {
+// 	display: none !important;
+// }
+// .hours-col-time {
+// 	font-size: 16px;
+// }
+// .feature--home {
+// 	text-align: center;
+// 	margin: 2.5em 0;
+// }
 
 // Footer
 // --------
