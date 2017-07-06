@@ -87,29 +87,33 @@ ul.sf-menu li.sfHover > ul {
 .sidebar {
 	h2 {
 		font-size: 14px;
-		color: $cornell-red;
+		color: $burgundy;
 		text-transform: uppercase;
 		margin-top: 0;
 		font-weight: 700;
 	}
 	.navbar-nav {
 		float: none;
-		border: 1px dotted $warm-gray;
 		margin-bottom: 2em;
+		padding-bottom: 1em;
+		border-bottom: 10px solid $gray-pale;
 		li {
 			float: none;
 		}
 		a {
-			border-top: 1px dotted $warm-gray;
+			color: $gray-dark;
 		}
-		li:first-child {
-			a {
-				border-top: 0;
-			}
+		a:before {
+			// Add font awesome chevron-right
+			content: "\f054";
+			font-family: FontAwesome;
+			margin-right: .5em;
+			color: $teal;
+			font-size: 12px;
 		}
 	}
 	.navbar-nav > li > a {
-		padding: 10px;
+		padding: 5px 0;
 	}
 	.block {
 		margin-bottom: 2em;

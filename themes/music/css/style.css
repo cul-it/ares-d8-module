@@ -6368,7 +6368,8 @@ body {
     margin-bottom: .25em; }
 
 .page-header {
-  border-bottom: 1px dotted #a2998b; }
+  color: #6a3846;
+  font-weight: 300; }
 
 .complementary li {
   font-size: 18px; }
@@ -6390,23 +6391,9 @@ body {
   padding: 14px 15px; }
 .global-menu .nav > li > a:hover {
   background: #222222; }
-.global-menu li:first-child a {
-  background: #8c0606; }
 
-.search-link a {
-  color: #222222;
-  background: white;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 10px 12px;
-  font-size: 14px;
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase; }
-.search-link i {
-  margin-left: .5em;
-  color: #b31b1b; }
-.search-link .visible-xs i {
-  margin-left: 0; }
+.cornell-brand .form-search {
+  border-radius: 0; }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -6473,22 +6460,27 @@ ul.sf-menu li.sfHover > ul {
 
 .sidebar h2 {
   font-size: 14px;
-  color: #b31b1b;
+  color: #6a3846;
   text-transform: uppercase;
   margin-top: 0;
   font-weight: 700; }
 .sidebar .navbar-nav {
   float: none;
-  border: 1px dotted #a2998b;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 10px solid #f2efee; }
   .sidebar .navbar-nav li {
     float: none; }
   .sidebar .navbar-nav a {
-    border-top: 1px dotted #a2998b; }
-  .sidebar .navbar-nav li:first-child a {
-    border-top: 0; }
+    color: #222222; }
+  .sidebar .navbar-nav a:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    margin-right: .5em;
+    color: #64afb8;
+    font-size: 12px; }
 .sidebar .navbar-nav > li > a {
-  padding: 10px; }
+  padding: 5px 0; }
 .sidebar .block {
   margin-bottom: 2em; }
 
@@ -6564,25 +6556,20 @@ ul.sf-menu li.sfHover > ul {
   background: white;
   padding-top: 2em; }
 
+.path-frontpage .main-text {
+  background: url("../images/statue.png") no-repeat 7em bottom;
+  background-size: contain; }
 .path-frontpage .page-header {
   display: none; }
 
 .home-primary {
   margin-bottom: 2em; }
 
-.feature {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-bottom: 2em; }
-  @media (min-width: 768px) {
-    .feature {
-      float: left;
-      width: 33.33333%; } }
-
-.view-collected-works .views-field-nothing {
-  width: 20%; }
+.home-secondary .view-header {
+  font-weight: 700;
+  margin-bottom: .5em; }
+.home-secondary .view-music-library-new-books {
+  margin-bottom: 1em; }
 
 .footer-music {
   color: white;
@@ -6608,15 +6595,27 @@ ul.sf-menu li.sfHover > ul {
     margin-top: 0; }
   .footer-music a {
     color: white;
+    text-decoration: underline;
+    font-size: 14px; }
+  .footer-music .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .footer-music li > a:hover {
+    background: inherit;
     text-decoration: underline; }
   .footer-music i {
     color: #b31b1b; }
   .footer-music li, .footer-music p {
     font-size: 12px; }
+  .footer-music li {
+    border-left: 1px solid #914f62; }
+  .footer-music li:first-child {
+    border-left: 0; }
+    .footer-music li:first-child a {
+      padding-left: 0; }
   .footer-music .well {
     background: #623441;
-    border: 0;
-    margin-top: 3em; }
+    border: 0; }
     .footer-music .well h2 {
       font-size: 16px; }
 
@@ -6632,7 +6631,7 @@ footer {
     margin-bottom: 1em; }
   footer p:last-child {
     margin-bottom: 1em; }
-  footer a {
+  footer a, footer a:hover {
     color: white;
     text-decoration: underline; }
 
@@ -6670,6 +6669,8 @@ footer {
     font-size: 20px;
     color: #888183;
     padding-top: 0; }
+  .catalog-search input {
+    border-radius: 0; }
 
 .list-links ul {
   list-style: none;
@@ -6680,7 +6681,7 @@ footer {
 .list-links li {
   margin-bottom: .25em;
   font-size: 14px; }
-.list-links .field li:before {
+.list-links .field li:before, .list-links .view-content li:before {
   content: "\f054";
   font-family: FontAwesome;
   margin-right: .5em;

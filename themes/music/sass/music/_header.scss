@@ -3,12 +3,6 @@
 	background: $gray-lighter;
 }
 
-// Hero
-// ---------
-// .hero {
-// 	background-color: $warm-gray-dark;
-// }
-
 // Global menu
 .global-menu {
 	.nav {
@@ -31,36 +25,12 @@
 	.nav > li > a:hover {
 		background: $gray-dark;
 	}
-	// Library Catalog link
-	li:first-child {
-		a {
-			background: $red-dark;
-		}
-		// a:hover {
-		// 	background: $gray-dark;
-		// }
-	}
 }
 
-// Search link
-// ------------
-.search-link {
-	a {
-		color: $gray-dark;
-		background: white;
-		background: rgba(255, 255, 255, 0.95);
-		padding: 10px 12px;
-		font-size: 14px;
-		display: inline-block;
-		font-family: $font-family-cul;
-		text-transform: uppercase;
-	}
-	i {
-		margin-left: .5em;
-		color: $cornell-red;
-	}
-	.visible-xs i {
-		margin-left: 0;
+// Search box
+.cornell-brand {
+	.form-search {
+		border-radius: 0;
 	}
 }
 

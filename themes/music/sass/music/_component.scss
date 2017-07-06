@@ -36,6 +36,9 @@
 		color: $medium-gray;
 		padding-top: 0;
 	}
+	input {
+		border-radius: 0;
+	}
 }
 
 // .feature {
@@ -66,7 +69,7 @@
 		margin-bottom: .25em;
 		font-size: 14px;
 	}
-	.field li:before {
+	.field li:before, .view-content li:before {
 		// Add font awesome chevron-right
 		content: "\f054";
 		font-family: FontAwesome;
@@ -75,73 +78,6 @@
 		font-size: 12px;
 	}
 }
-// .list-links,
-// .feature {
-// 	.block-title:before {
-// 		font-family: FontAwesome;
-// 		color: $cornell-red;
-// 		font-size: 80%;
-// 		margin-right: .25em;
-// 	}
-// }
-// .list-links--resources {
-// 	// Font Awesome: database
-// 	.block-title:before {
-// 		content: "\f1c0";	
-// 	}
-// }
-// .list-links--services {
-// 	// Font Awesome: handshake-o
-// 	.block-title:before {
-// 		content: "\f2b5";
-// 	}
-// }
-// .list-links--blog {
-// 	.block-title:before {
-// 		content: "\f19a";
-// 	}
-// }
-// .feature--hours {
-// 	.block-title:before {
-// 		content: "\f017";
-// 	}
-// 	h3 {
-// 		margin-top: 0;
-// 	}
-// 	i {
-// 		margin-left: .25em;
-// 		font-size: 90%;
-// 	}
-// }
-// .sidebar {
-// 	.feature--hours {
-// 		h3 {
-// 			font-size: 14px;
-// 			font-weight: 700;
-// 			text-transform: uppercase;
-// 		}
-// 		h3:before {
-// 			font-family: FontAwesome;
-// 			margin-right: .5em;
-// 			color: $cornell-red;
-// 			content: "\f017";
-// 		}
-// 		p {
-// 			margin: 1em 0;
-// 			font-size: 110%;
-// 		}
-// 	}
-// }
-// .hours-col-loc {
-// 	display: none !important;
-// }
-// .hours-col-time {
-// 	font-size: 16px;
-// }
-// .feature--home {
-// 	text-align: center;
-// 	margin: 2.5em 0;
-// }
 
 // Top search box
 // -----------------

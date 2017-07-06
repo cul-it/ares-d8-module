@@ -5,11 +5,14 @@
 	padding-top: 2em;
 }
 
-
 // Home page
 // ------------
 // Hide page title
 .path-frontpage {
+	.main-text {
+		background: url("../images/statue.png") no-repeat 7em bottom;
+		background-size: contain;
+	}
 	.page-header {
 		display: none;
 	}
@@ -17,20 +20,21 @@
 .home-primary {
 	margin-bottom: 2em;
 }
-
-// Home page feature blocks
-.feature {
-	@include make-sm-column(4);
-	margin-bottom: 2em;
-}
-
-// Collected Works
-// ----------------
-.view-collected-works {
-	.views-field-nothing {
-		width: 20%;
+.home-secondary {
+	.view-header {
+		font-weight: 700;
+		margin-bottom: .5em;
+	}
+	.view-music-library-new-books {
+		margin-bottom: 1em;
 	}
 }
+
+// Home page feature blocks
+// .feature {
+// 	@include make-sm-column(4);
+// 	margin-bottom: 2em;
+// }
 
 
 // Music footer
@@ -61,7 +65,16 @@
 	}
 	a {
 		color: white;
-		text-decoration: underline
+		text-decoration: underline;
+		font-size: 14px;
+	}
+	.navbar-nav > li > a {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	li > a:hover {
+		background: inherit;
+		text-decoration: underline;
 	}
 	i {
 		color: $cornell-red;
@@ -69,10 +82,18 @@
 	li, p {
 		font-size: 12px;
 	}
+	li {
+		border-left: 1px solid #914f62;
+	}
+	li:first-child {
+		border-left: 0;
+		a {
+			padding-left: 0;
+		}
+	}
 	.well {
 		background: #623441;
 		border: 0;
-		margin-top: 3em;
 		h2 {
 			font-size: 16px;
 		}
@@ -95,7 +116,7 @@ footer {
 	p:last-child {
 	 	margin-bottom: 1em;
 	}
-	a {
+	a, a:hover {
 		color: white;
 		text-decoration: underline;
 	}
