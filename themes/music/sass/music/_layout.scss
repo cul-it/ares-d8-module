@@ -29,13 +29,11 @@
 		margin-bottom: 1em;
 	}
 }
-
-// Home page feature blocks
-// .feature {
-// 	@include make-sm-column(4);
-// 	margin-bottom: 2em;
-// }
-
+.home-blog,
+.region-home-feature4 {
+	border-top: 10px solid $gray-pale;
+	padding-top: 2em;
+}
 
 // Music footer
 // -------------

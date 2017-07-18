@@ -8,6 +8,9 @@
 	}
 }
 .home-banner {
+	p, li {
+		font-size: 16px;
+	}
 	.well {
 		background: rgba(255,255,255,.8);
 		border: 0;
@@ -40,20 +43,32 @@
 		border-radius: 0;
 	}
 }
-
-// .feature {
-// 	.block-title {
-// 		border-bottom: 2px solid $gray-lighter;
-// 		padding-bottom: .25em;
-// 		font-weight: 300;
-// 		font-size: 28px;
-// 	}
-// 	h3 {
-// 		font-size: 14px;
-// 		font-weight: 700;
-// 		text-transform: uppercase;
-// 	}
-// }
+.today-hours {
+	background: $eggplant;
+	opacity: .6;
+	border-radius: 3px;
+	color: white;
+	margin-top: 2em;
+	padding: 10px;
+	width: 80%;
+}
+.hours-col-loc {
+	display: none !important; 
+}
+.hours-col-time {
+	font-size: 20px;
+}
+.home-banner {
+	.today-hours {
+		h2 {
+			font-size: 16px;
+			color: white;
+			font-weight: 300;
+			margin: .4em 1em .25em 0;
+			float: left;
+		}
+	}
+}
 
 // List of links blocks
 .list-links {
@@ -67,7 +82,7 @@
 	}
 	li {
 		margin-bottom: .25em;
-		font-size: 14px;
+		font-size: 16px;
 	}
 	.field li:before, .view-content li:before {
 		// Add font awesome chevron-right
@@ -86,10 +101,22 @@
 		background: none;
 		border: 0;
 		padding-top: 4px;
+		padding-right: 0;
 	}
 	.glyphicon {
 		color: $teal;
 		font-size: 24px;
+	}
+}
+
+// Database lists
+// ----------------
+.main-text {
+	.database-item,
+	.view-item {
+		h3 {
+			margin-bottom: .4em;
+		}
 	}
 }
 
