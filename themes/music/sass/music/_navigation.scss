@@ -144,32 +144,6 @@ ul.sf-menu li.sfHover > ul {
 	}
 }
 
-// Math footer nav
-// -----------------
-.footer_math {
-	li {
-		float: none;
-	}
-	.nav > li > a {
-		padding: 3px 0;
-		color: $link-primary;
-		text-decoration: underline;
-	}
-	.nav > li > a:hover {
-		background: inherit;
-	}
-}
-
-// Collected Works A-Z index
-// ---------------------------
-.works-index {
-	margin-bottom: 1em;
-	a {
-		background: $border-color;
-		margin-bottom: 4px;
-	}
-}
-
 // MEDIA QUERIES
 // -------------------------
 

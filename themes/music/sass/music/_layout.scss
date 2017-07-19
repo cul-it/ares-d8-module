@@ -2,7 +2,7 @@
 // --------------
 .main-content {
 	background: white;
-	padding-top: 2em;
+	padding: 2em 0;
 }
 
 // Home page
@@ -15,6 +15,9 @@
 	}
 	.page-header {
 		display: none;
+	}
+	.main-content {
+		padding-bottom: 0;
 	}
 }
 .home-primary {
