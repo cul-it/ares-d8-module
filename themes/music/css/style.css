@@ -6521,9 +6521,10 @@ ul.sf-menu li.sfHover > ul {
 
 .sf-accordion-toggle {
   padding: 10px 15px;
-  background: #6a3846; }
+  background: #f2efee;
+  display: inline-block; }
   .sf-accordion-toggle a {
-    color: white;
+    color: #333333;
     text-transform: uppercase;
     display: block; }
   .sf-accordion-toggle a:after {
@@ -6692,10 +6693,6 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .path-frontpage .footer-music {
-    margin-top: -60px;
-    padding-top: 5em; }
-
   .footer-music li {
     border-left: 1px solid #914f62; }
   .footer-music li:first-child {
@@ -6706,7 +6703,10 @@ footer {
   .path-frontpage .main-text {
     background: url("../images/statue2.png") no-repeat 7em bottom;
     background-size: contain;
-    padding-bottom: 7em; } }
+    padding-bottom: 7em; }
+  .path-frontpage .footer-music {
+    margin-top: -60px;
+    padding-top: 5em; } }
 .home-banner h2, .home-content h2 {
   font-size: 24px;
   color: #6a3846;

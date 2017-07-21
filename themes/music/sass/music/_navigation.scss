@@ -139,9 +139,10 @@ ul.sf-menu li.sfHover > ul {
 // -------------------
 .sf-accordion-toggle {
 	padding: 10px 15px;
-	background: $burgundy;
+	background: $gray-pale;
+	display: inline-block;
 	a {
-		color: white;
+		color: $gray-dark;
 		text-transform: uppercase;
 		display: block;
 	}

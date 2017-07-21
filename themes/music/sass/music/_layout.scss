@@ -125,12 +125,6 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm) {
-	.path-frontpage {
-		.footer-music {
-			margin-top: -60px;
-			padding-top: 5em;
-		}
-	}
 	.footer-music {
 			li {
 			border-left: 1px solid #914f62;
@@ -151,6 +145,10 @@ footer {
 			background: url("../images/statue2.png") no-repeat 7em bottom;
 			background-size: contain;
 			padding-bottom: 7em;
+		}
+		.footer-music {
+			margin-top: -60px;
+			padding-top: 5em;
 		}
 	}
 }
