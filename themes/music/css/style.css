@@ -6522,7 +6522,8 @@ ul.sf-menu li.sfHover > ul {
   color: #6a3846; }
 
 .sf-accordion-toggle {
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  background: #6a3846; }
   .sf-accordion-toggle a {
     color: white;
     text-transform: uppercase;
@@ -6578,10 +6579,6 @@ ul.sf-menu li.sfHover > ul {
   background: white;
   padding: 2em 0; }
 
-.path-frontpage .main-text {
-  background: url("../images/statue2.png") no-repeat 7em bottom;
-  background-size: contain;
-  padding-bottom: 7em; }
 .path-frontpage .page-header {
   display: none; }
 .path-frontpage .main-content {
@@ -6674,7 +6671,11 @@ footer {
 @media (min-width: 768px) {
   .path-frontpage .footer-music {
     margin-top: -60px;
-    padding-top: 5em; } }
+    padding-top: 5em; }
+  .path-frontpage .main-text {
+    background: url("../images/statue2.png") no-repeat 7em bottom;
+    background-size: contain;
+    padding-bottom: 7em; } }
 .home-banner h2, .home-content h2 {
   font-size: 24px;
   color: #6a3846;
@@ -6698,7 +6699,7 @@ footer {
   .catalog-search .form-group {
     width: 100%; }
   .catalog-search .input-group {
-    width: 80%; }
+    width: 100%; }
   .catalog-search .btn {
     background: none; }
   .catalog-search .glyphicon {
@@ -6774,7 +6775,8 @@ footer {
 .pagination > li > a {
   color: #564d4a; }
 
-.pagination > .active > a {
+.pagination > .active > a,
+.pagination > .active > a:hover {
   background-color: #6a3846;
   border-color: #6a3846; }
 
@@ -6788,7 +6790,15 @@ footer {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .feature .block-title {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  #columns {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .feature .block-title {

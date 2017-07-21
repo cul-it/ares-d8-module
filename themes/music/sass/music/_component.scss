@@ -29,7 +29,7 @@
 		width: 100%;
 	}
 	.input-group {
-		width: 80%;
+		width: 100%;
 	}
 	.btn {
 		background: none;
@@ -164,7 +164,8 @@
 .pagination > li > a {
 	color: $dark-gray;
 }
-.pagination > .active > a {
+.pagination > .active > a,
+.pagination > .active > a:hover {
 	background-color: $burgundy;
 	border-color: $burgundy;
 }
@@ -190,6 +191,16 @@
 		.block-title {
 			font-size: 20px;
 		}
+	}
+	// Multi-column list
+	// -------------------
+	#columns {
+	    -moz-column-count: 3;
+	    -moz-column-gap: 20px;
+	    -webkit-column-count: 3;
+	    -webkit-column-gap: 20px;
+	    column-count: 3;
+	    column-gap: 20px;
 	}
 }
 

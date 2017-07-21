@@ -9,11 +9,6 @@
 // ------------
 // Hide page title
 .path-frontpage {
-	.main-text {
-		background: url("../images/statue2.png") no-repeat 7em bottom;
-		background-size: contain;
-		padding-bottom: 7em;
-	}
 	.page-header {
 		display: none;
 	}
@@ -154,6 +149,11 @@ footer {
 		.footer-music {
 			margin-top: -60px;
 			padding-top: 5em;
+		}
+		.main-text {
+			background: url("../images/statue2.png") no-repeat 7em bottom;
+			background-size: contain;
+			padding-bottom: 7em;
 		}
 	}
 }

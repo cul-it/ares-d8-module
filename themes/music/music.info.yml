@@ -33,3 +33,4 @@ libraries:
   - 'music/global-styling'
   - 'music/bootstrap-scripts'
   - 'music/fonts'
+  - 'music/placeholder'
