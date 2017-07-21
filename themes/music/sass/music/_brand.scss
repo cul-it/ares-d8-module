@@ -5,7 +5,7 @@
 
 // Library brand
 .library-brand {
-	margin: 1em 0;
+	margin: 0 0 1em 0;
 }
 .culbrand {
 	font-family: $font-family-cul;
@@ -16,7 +16,7 @@
 }
 .culbrand--cul,
 .culbrand--cul:hover {
-	font-size: 20px;
+	font-size: 16px;
 	display: inline-block;
 	color: $medium-gray;
 	margin-top: .3em;
@@ -24,7 +24,7 @@
 .culbrand--music,
 .culbrand--music:hover {
 	text-transform: uppercase;
-	font-size: 26px;
+	font-size: 22px;
 	line-height: 1.1em;
 	color: $dark-gray;
 }
@@ -36,22 +36,28 @@
 		height: auto;
 	}
 }
+// For mobile only
+.cu-logo {
+	margin-top: 5px;
+	img { 
+		height: 45px;
+	}
+}
 
 // MEDIA QUERIES
 // -------------------------
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm) {
-	// .library-brand {
-	// 	margin: 3em 0;
-	// }
-	// .culbrand--cul {
-	// 	font-size: 20px;
-	// }
-	// .culbrand--music {
-	// 	font-size: 40px;
-	// 	line-height: 1.1em;
-	// }
+	.library-brand {
+		margin-top: 1em;
+	}
+	.culbrand--cul {
+		font-size: 20px;
+	}
+	.culbrand--music {
+		font-size: 26px;
+	}
 }
 
 // /* Medium devices (desktops, 992px and up) */

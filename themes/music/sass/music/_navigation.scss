@@ -123,9 +123,6 @@ ul.sf-menu li.sfHover > ul {
 			font-size: 12px;
 		}
 	}
-	.navbar-nav > li > a {
-		padding: 5px 0;
-	}
 	.block {
 		margin-bottom: 2em;
 	}
@@ -166,6 +163,11 @@ ul.sf-menu li.sfHover > ul {
 @media (min-width: $screen-sm) {
 	header.navbar {
 		padding-left: 0;
+	}
+	.sidebar {
+		.navbar-nav > li > a {
+			padding: 5px 0;
+		}
 	}
 }
 

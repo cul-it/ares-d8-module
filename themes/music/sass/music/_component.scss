@@ -18,11 +18,6 @@
 		padding: 2em 2em 2.5em 2em;
 	}
 }
-.home-search {
-	border-left: 1px solid $teal;
-	padding-left: 2em;
-	padding-bottom: 1em;
-}
 .catalog-search {
 	margin-bottom: 2em;
 	.form-group {
@@ -65,9 +60,11 @@
 			color: white;
 			font-weight: 300;
 			margin: .4em 1em .25em 0;
-			float: left;
 		}
 	}
+}
+.home-search {
+	margin-top: 1em;
 }
 
 // List of links blocks
@@ -201,6 +198,19 @@
 	    -webkit-column-gap: 20px;
 	    column-count: 3;
 	    column-gap: 20px;
+	}
+	.home-search {
+		border-left: 1px solid $teal;
+		padding-left: 2em;
+		padding-bottom: 1em;
+		margin-top: 0;
+	}
+	.home-banner {
+		.today-hours {
+			h2 {
+				float: left;
+			}
+		}
 	}
 }
 

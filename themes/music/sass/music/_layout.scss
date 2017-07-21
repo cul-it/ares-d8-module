@@ -79,15 +79,6 @@
 	li, p {
 		font-size: 14px;
 	}
-	li {
-		border-left: 1px solid #914f62;
-	}
-	li:first-child {
-		border-left: 0;
-		a {
-			padding-left: 0;
-		}
-	}
 	.well {
 		background: #623441;
 		border: 0;
@@ -154,6 +145,17 @@ footer {
 			background: url("../images/statue2.png") no-repeat 7em bottom;
 			background-size: contain;
 			padding-bottom: 7em;
+		}
+	}
+	.footer-music {
+			li {
+			border-left: 1px solid #914f62;
+		}
+		li:first-child {
+			border-left: 0;
+			a {
+				padding-left: 0;
+			}
 		}
 	}
 }

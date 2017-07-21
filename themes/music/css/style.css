@@ -6415,15 +6415,15 @@ body {
 .cornell-brand .form-search {
   border-radius: 0; }
 
+.hero {
+  background: url("../images/windows.jpg") no-repeat;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important; }
+
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .hero {
-    background: url("../images/windows.jpg") no-repeat;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-size: cover !important;
-    background-position: 50% 50% !important; } }
 .secondary-links .nav {
   float: right;
   background: #f2efee;
@@ -6513,8 +6513,6 @@ ul.sf-menu li.sfHover > ul {
     margin-right: .5em;
     color: #64afb8;
     font-size: 12px; }
-.sidebar .navbar-nav > li > a {
-  padding: 5px 0; }
 .sidebar .block {
   margin-bottom: 2em; }
 .sidebar .active a {
@@ -6539,12 +6537,15 @@ ul.sf-menu li.sfHover > ul {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   header.navbar {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .sidebar .navbar-nav > li > a {
+    padding: 5px 0; } }
 .cornell-brand {
   background: white; }
 
 .library-brand {
-  margin: 1em 0; }
+  margin: 0 0 1em 0; }
 
 .culbrand {
   font-family: "Montserrat", sans-serif;
@@ -6555,7 +6556,7 @@ ul.sf-menu li.sfHover > ul {
 
 .culbrand--cul,
 .culbrand--cul:hover {
-  font-size: 20px;
+  font-size: 16px;
   display: inline-block;
   color: #888183;
   margin-top: .3em; }
@@ -6563,7 +6564,7 @@ ul.sf-menu li.sfHover > ul {
 .culbrand--music,
 .culbrand--music:hover {
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.1em;
   color: #564d4a; }
 
@@ -6574,7 +6575,21 @@ ul.sf-menu li.sfHover > ul {
     width: 100px;
     height: auto; }
 
+.cu-logo {
+  margin-top: 5px; }
+  .cu-logo img {
+    height: 45px; }
+
 /* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .library-brand {
+    margin-top: 1em; }
+
+  .culbrand--cul {
+    font-size: 20px; }
+
+  .culbrand--music {
+    font-size: 26px; } }
 .main-content {
   background: white;
   padding: 2em 0; }
@@ -6634,12 +6649,6 @@ ul.sf-menu li.sfHover > ul {
     color: #b31b1b; }
   .footer-music li, .footer-music p {
     font-size: 14px; }
-  .footer-music li {
-    border-left: 1px solid #914f62; }
-  .footer-music li:first-child {
-    border-left: 0; }
-    .footer-music li:first-child a {
-      padding-left: 0; }
   .footer-music .well {
     background: #623441;
     border: 0; }
@@ -6675,7 +6684,14 @@ footer {
   .path-frontpage .main-text {
     background: url("../images/statue2.png") no-repeat 7em bottom;
     background-size: contain;
-    padding-bottom: 7em; } }
+    padding-bottom: 7em; }
+
+  .footer-music li {
+    border-left: 1px solid #914f62; }
+  .footer-music li:first-child {
+    border-left: 0; }
+    .footer-music li:first-child a {
+      padding-left: 0; } }
 .home-banner h2, .home-content h2 {
   font-size: 24px;
   color: #6a3846;
@@ -6688,11 +6704,6 @@ footer {
   border: 0;
   margin: 2em 0 0 0;
   padding: 2em 2em 2.5em 2em; }
-
-.home-search {
-  border-left: 1px solid #64afb8;
-  padding-left: 2em;
-  padding-bottom: 1em; }
 
 .catalog-search {
   margin-bottom: 2em; }
@@ -6728,8 +6739,10 @@ footer {
   font-size: 16px;
   color: white;
   font-weight: 300;
-  margin: .4em 1em .25em 0;
-  float: left; }
+  margin: .4em 1em .25em 0; }
+
+.home-search {
+  margin-top: 1em; }
 
 .list-links ul {
   list-style: none;
@@ -6798,7 +6811,16 @@ footer {
     -webkit-column-count: 3;
     -webkit-column-gap: 20px;
     column-count: 3;
-    column-gap: 20px; } }
+    column-gap: 20px; }
+
+  .home-search {
+    border-left: 1px solid #64afb8;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    margin-top: 0; }
+
+  .home-banner .today-hours h2 {
+    float: left; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .feature .block-title {
