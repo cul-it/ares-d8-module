@@ -10,8 +10,9 @@
 // Hide page title
 .path-frontpage {
 	.main-text {
-		background: url("../images/statue.png") no-repeat 7em bottom;
+		background: url("../images/statue2.png") no-repeat 7em bottom;
 		background-size: contain;
+		padding-bottom: 7em;
 	}
 	.page-header {
 		display: none;
@@ -52,6 +53,7 @@
 	background: linear-gradient(to bottom, rgba(106,56,70,1) 0%, rgba(55,28,36,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$burgundy', endColorstr='$dark-burgundy', GradientType=0 );
 	padding: 2em 0;
+	border-top: 10px solid $gray-pale;
 	h2 {
 		font-family: $font-family-cul;
 		text-transform: uppercase;
@@ -67,7 +69,6 @@
 	a {
 		color: white;
 		text-decoration: underline;
-		font-size: 14px;
 	}
 	.navbar-nav > li > a {
 		padding-top: 5px;
@@ -81,7 +82,7 @@
 		color: $cornell-red;
 	}
 	li, p {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	li {
 		border-left: 1px solid #914f62;
@@ -137,19 +138,25 @@ footer {
 // -------------------------
 
 /* Small devices (tablets, 768px and up) */
-// @media (min-width: $screen-sm) {
-// 	.sidebar {
-// 		margin-top: 0;
-// 	}
-// 	.feature {
-// 		.block-title {
-// 			font-size: 18px;
-// 			i {
-// 				font-size: 18px;
-// 			}
-// 		}
-// 	}
-// }
+@media (min-width: $screen-sm) {
+	// .sidebar {
+	// 	margin-top: 0;
+	// }
+	// .feature {
+	// 	.block-title {
+	// 		font-size: 18px;
+	// 		i {
+	// 			font-size: 18px;
+	// 		}
+	// 	}
+	// }
+	.path-frontpage {
+		.footer-music {
+			margin-top: -60px;
+			padding-top: 5em;
+		}
+	}
+}
 
 // /* Medium devices (desktops, 992px and up) */
 // @media (min-width: $screen-md) {

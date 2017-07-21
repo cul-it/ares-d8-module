@@ -36,7 +36,7 @@
 	}
 	.glyphicon {
 		font-size: 20px;
-		color: $medium-gray;
+		color: $teal;
 		padding-top: 0;
 	}
 	input {
@@ -157,6 +157,28 @@
 .simplesamlphp-auth-login-link {
 	margin-bottom: 2em;
 	display: inline-block;
+}
+
+// Pagination
+// ------------
+.pagination > li > a {
+	color: $dark-gray;
+}
+.pagination > .active > a {
+	background-color: $burgundy;
+	border-color: $burgundy;
+}
+
+// Jump links
+// ------------
+.jump-links {
+	h3 {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $burgundy;
+		margin: 0 0 1em 0;
+	}
 }
 
 // MEDIA QUERIES

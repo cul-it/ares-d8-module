@@ -56,8 +56,16 @@ header.navbar {
 			background: $gray-pale;
 			padding: .75em 1.5em;
 		}
+		a:hover {
+			background: $teal;
+			color: white;
+		}
+		.is-active, .is-active:hover {
+			background: $burgundy;
+			color: white;
+		}
 	}
-	.is-active {
+	.is-active, .sfHover {
 		background: $gray-pale;
 	}
 	a.menuparent:after {
@@ -120,6 +128,12 @@ ul.sf-menu li.sfHover > ul {
 	}
 	.block {
 		margin-bottom: 2em;
+	}
+	.active {
+		a {
+			font-weight: 700;
+			color: $burgundy;
+		}
 	}
 
 }
