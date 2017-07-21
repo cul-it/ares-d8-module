@@ -125,26 +125,10 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm) {
-	// .sidebar {
-	// 	margin-top: 0;
-	// }
-	// .feature {
-	// 	.block-title {
-	// 		font-size: 18px;
-	// 		i {
-	// 			font-size: 18px;
-	// 		}
-	// 	}
-	// }
 	.path-frontpage {
 		.footer-music {
 			margin-top: -60px;
 			padding-top: 5em;
-		}
-		.main-text {
-			background: url("../images/statue2.png") no-repeat 7em bottom;
-			background-size: contain;
-			padding-bottom: 7em;
 		}
 	}
 	.footer-music {
@@ -161,16 +145,15 @@ footer {
 }
 
 // /* Medium devices (desktops, 992px and up) */
-// @media (min-width: $screen-md) {
-// 	.feature {
-// 		.block-title {
-// 			font-size: 24px;
-// 			i {
-// 				font-size: 24px;
-// 			}
-// 		}
-// 	}
-// }
+@media (min-width: $screen-md) {
+	.path-frontpage {
+		.main-text {
+			background: url("../images/statue2.png") no-repeat 7em bottom;
+			background-size: contain;
+			padding-bottom: 7em;
+		}
+	}
+}
 // /* Large devices (desktops, 1200px and up) */
 // @media (min-width: $screen-lg) {
 // 	.feature {

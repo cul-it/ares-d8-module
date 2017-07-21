@@ -6425,14 +6425,14 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 .secondary-links .nav {
-  float: right;
   background: #f2efee;
   margin-bottom: 2em; }
   .secondary-links .nav li {
     float: left; }
   .secondary-links .nav a {
-    font-size: 14px;
-    color: #564d4a; }
+    font-size: 12px;
+    color: #564d4a;
+    padding: 5px 8px; }
   .secondary-links .nav a:hover {
     background: #64afb8;
     color: white; }
@@ -6540,7 +6540,14 @@ ul.sf-menu li.sfHover > ul {
     padding-left: 0; }
 
   .sidebar .navbar-nav > li > a {
-    padding: 5px 0; } }
+    padding: 5px 0; }
+
+  .secondary-links .nav {
+    float: right; } }
+@media (min-width: 992px) {
+  .secondary-links .nav a {
+    font-size: 14px;
+    padding: 10px 15px; } }
 .cornell-brand {
   background: white; }
 
@@ -6558,13 +6565,12 @@ ul.sf-menu li.sfHover > ul {
 .culbrand--cul:hover {
   font-size: 16px;
   display: inline-block;
-  color: #888183;
-  margin-top: .3em; }
+  color: #888183; }
 
 .culbrand--music,
 .culbrand--music:hover {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.1em;
   color: #564d4a; }
 
@@ -6572,7 +6578,6 @@ ul.sf-menu li.sfHover > ul {
   float: left;
   margin-right: 1em; }
   .cu-insignia img {
-    width: 100px;
     height: auto; }
 
 .cu-logo {
@@ -6585,10 +6590,19 @@ ul.sf-menu li.sfHover > ul {
   .library-brand {
     margin-top: 1em; }
 
-  .culbrand--cul {
-    font-size: 20px; }
+  .cu-insignia img {
+    width: 65px; } }
+@media (min-width: 992px) {
+  .cu-insignia img {
+    width: 100px; }
 
-  .culbrand--music {
+  .culbrand--cul,
+  .culbrand--cul:hover {
+    font-size: 20px;
+    margin-top: .3em; }
+
+  .culbrand--music,
+  .culbrand--music:hover {
     font-size: 26px; } }
 .main-content {
   background: white;
@@ -6681,10 +6695,6 @@ footer {
   .path-frontpage .footer-music {
     margin-top: -60px;
     padding-top: 5em; }
-  .path-frontpage .main-text {
-    background: url("../images/statue2.png") no-repeat 7em bottom;
-    background-size: contain;
-    padding-bottom: 7em; }
 
   .footer-music li {
     border-left: 1px solid #914f62; }
@@ -6692,6 +6702,11 @@ footer {
     border-left: 0; }
     .footer-music li:first-child a {
       padding-left: 0; } }
+@media (min-width: 992px) {
+  .path-frontpage .main-text {
+    background: url("../images/statue2.png") no-repeat 7em bottom;
+    background-size: contain;
+    padding-bottom: 7em; } }
 .home-banner h2, .home-content h2 {
   font-size: 24px;
   color: #6a3846;
@@ -6817,14 +6832,14 @@ footer {
     border-left: 1px solid #64afb8;
     padding-left: 2em;
     padding-bottom: 1em;
-    margin-top: 0; }
-
-  .home-banner .today-hours h2 {
-    float: left; } }
+    margin-top: 0; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .feature .block-title {
-    font-size: 26px; } }
+    font-size: 26px; }
+
+  .home-banner .today-hours h2 {
+    float: left; } }
 /* Large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .feature .block-title {

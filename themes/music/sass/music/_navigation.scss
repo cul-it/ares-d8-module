@@ -2,15 +2,15 @@
 // ----------------
 .secondary-links {	
 	.nav {
-		float: right;
 		background: $gray-pale;
 		margin-bottom: 2em;
 		li {
 			float: left;
 		}
 		a {
-			font-size: 14px;
+			font-size: 12px;
 			color: $dark-gray;
+			padding: 5px 8px;
 		}
 		a:hover {
 			background: $teal;
@@ -169,11 +169,24 @@ ul.sf-menu li.sfHover > ul {
 			padding: 5px 0;
 		}
 	}
+	.secondary-links {
+		.nav {
+			float: right;
+		}
+	}
 }
 
 // /* Medium devices (desktops, 992px and up) */
-// @media (min-width: $screen-md) {
-// }
+@media (min-width: $screen-md) {
+	.secondary-links {
+		.nav {
+			a {
+				font-size: 14px;
+				padding: 10px 15px;
+			}
+		}
+	}
+}
 // /* Large devices (desktops, 1200px and up) */
 // @media (min-width: $screen-lg) {
 // }

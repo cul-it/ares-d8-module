@@ -205,13 +205,6 @@
 		padding-bottom: 1em;
 		margin-top: 0;
 	}
-	.home-banner {
-		.today-hours {
-			h2 {
-				float: left;
-			}
-		}
-	}
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -219,6 +212,13 @@
 	.feature {
 		.block-title {
 			font-size: 26px;
+		}
+	}
+	.home-banner {
+		.today-hours {
+			h2 {
+				float: left;
+			}
 		}
 	}
 }
