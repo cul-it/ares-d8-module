@@ -1,0 +1,12 @@
+# Set configuration defaults. This schema describes the cull_users.settings
+# config. The defaults for this config are set in
+# config/install/cull_users.settings.yml and then used by
+# \Drupal\cull_users\Form\CronExampleForm.
+# @see https://www.drupal.org/node/1905070
+cull_users.settings:
+  type: config_object
+  label: 'Cull Users settings'
+  mapping:
+    interval:
+      type: integer
+      label: 'Period between cron runs'

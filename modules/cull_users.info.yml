@@ -1,0 +1,8 @@
+name: Cull users
+type: module
+description: 'Removes users who have no assigned roles'
+package: Cornell University Library
+core: 8.x
+dependencies:
+  - drupal:node
+configure: cull_users.admin_settings
