@@ -148,7 +148,9 @@ class SimplesamlphpAuthController extends ControllerBase implements ContainerInj
     // otherwise, use the HTTP_REFERER. Each must point to the site to be valid.
     $request = $this->requestStack->getCurrentRequest();
 
-    if (($return_to = $request->request->get('ReturnTo')) || ($return_to = $request->server->get('HTTP_REFERER'))) {
+    if (($return_to = $request->query->get('ReturnTo')) ||
+        ($return_to = $request->request->get('ReturnTo')) ||
+        ($return_to = $request->server->get('HTTP_REFERER'))) {
       if ($this->pathValidator->isValid($return_to) && UrlHelper::externalIsLocal($return_to, $base_url)) {
         $redirect = $return_to;
       }
@@ -160,7 +162,9 @@ class SimplesamlphpAuthController extends ControllerBase implements ContainerInj
       if (isset($redirect)) {
         // Set the cookie so we can deliver the user to the place they started.
         // @TODO probably a more symfony way of doing this
-        setrawcookie('simplesamlphp_auth_returnto', $redirect, time() + 60 * 60);
+        $cookie_secure = $this->config->get('secure');
+        $cookie_httponly = $this->config->get('httponly');
+        setrawcookie('simplesamlphp_auth_returnto', $redirect, time() + 60 * 60, "", "", $cookie_secure, $cookie_httponly);
       }
 
       // User is logged in to the SimpleSAMLphp IdP, but not to Drupal.
@@ -208,6 +212,11 @@ class SimplesamlphpAuthController extends ControllerBase implements ContainerInj
     if (isset($redirect)) {
       // Avoid caching of redirect response object.
       \Drupal::service('page_cache_kill_switch')->trigger();
+      if ($this->config->get('debug')) {
+        $this->logger->debug('Redirecting user to %redirect', [
+          '%redirect' => $redirect,
+        ]);
+      }
       $response = new RedirectResponse($redirect, RedirectResponse::HTTP_FOUND);
       return $response;
     }
