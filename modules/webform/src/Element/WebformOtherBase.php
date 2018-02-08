@@ -6,6 +6,7 @@ use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\OptGroup;
 use Drupal\Core\Render\Element\FormElement;
+use Drupal\webform\Utility\WebformElementHelper;
 use Drupal\webform\Utility\WebformOptionsHelper;
 
 /**
@@ -93,12 +94,23 @@ abstract class WebformOtherBase extends FormElement {
     $element['#wrapper_attributes']['class'][] = "js-webform-$type-other";
     $element['#wrapper_attributes']['class'][] = "webform-$type-other";
 
+    if (!empty($element['#required'])) {
+      $element['#wrapper_attributes']['required'] = 'required';
+      $element['#wrapper_attributes']['aria-required'] = 'aria-required';
+    }
+
     $element[$type]['#type'] = static::$type;
     $element[$type] += array_intersect_key($element, array_combine($properties, $properties));
     if (!isset($element[$type]['#options'][static::OTHER_OPTION])) {
       $element[$type]['#options'][static::OTHER_OPTION] = (!empty($element['#other__option_label'])) ? $element['#other__option_label'] : t('Other...');
     }
     $element[$type]['#error_no_message'] = TRUE;
+
+    // Disable label[for] which does not point to any specific element.
+    // @see webform_preprocess_form_element_label()
+    if (in_array($type, ['radios', 'checkboxes', 'buttons'])) {
+      $element['#label_attributes']['for'] = FALSE;
+    }
 
     // Build other textfield.
     $element['other']['#error_no_message'] = TRUE;
@@ -167,24 +179,27 @@ abstract class WebformOtherBase extends FormElement {
     $return_value = [];
     $element_value = $value[$type];
     $other_value = $value['other'];
+    $required_error_title = (isset($element['#title'])) ? $element['#title'] : NULL;
     if (static::isMultiple($element)) {
       $element_value = array_filter($element_value);
+      $element_value = array_combine($element_value, $element_value);
       $return_value += $element_value;
-      if (isset($element_value[static::OTHER_OPTION])) {
+      if (isset($return_value[static::OTHER_OPTION])) {
         unset($return_value[static::OTHER_OPTION]);
         if ($has_access && $other_value === '') {
-          static::setOtherError($element, $form_state);
-          return;
+          WebformElementHelper::setRequiredError($element['other'], $form_state, $required_error_title);
         }
-        $return_value += [$other_value => $other_value];
+        else {
+          $return_value += [$other_value => $other_value];
+        }
       }
     }
     else {
       $return_value = $element_value;
       if ($element_value == static::OTHER_OPTION) {
         if ($has_access && $other_value === '') {
-          static::setOtherError($element, $form_state);
-          return;
+          WebformElementHelper::setRequiredError($element['other'], $form_state, $required_error_title);
+          $return_value = '';
         }
         else {
           $return_value = $other_value;
@@ -202,7 +217,7 @@ abstract class WebformOtherBase extends FormElement {
 
     // Handler required validation.
     if ($element['#required'] && $is_empty && $has_access) {
-      static::setElementError($element, $form_state);
+      WebformElementHelper::setRequiredError($element, $form_state, $required_error_title);
     }
 
     $form_state->setValueForElement($element[$type], NULL);
@@ -263,50 +278,6 @@ abstract class WebformOtherBase extends FormElement {
       }
 
       return [$type => $default_value, 'other' => NULL];
-    }
-  }
-
-  /****************************************************************************/
-  // Error functions.
-  /****************************************************************************/
-
-  /**
-   * Set element required error.
-   *
-   * @param array $element
-   *   The webform element.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
-   */
-  protected static function setElementError(array &$element, FormStateInterface $form_state) {
-    if (isset($element['#required_error'])) {
-      $form_state->setError($element, $element['#required_error']);
-    }
-    elseif (isset($element['#title'])) {
-      $form_state->setError($element, t('@name field is required.', ['@name' => $element['#title']]));
-    }
-    else {
-      $form_state->setError($element);
-    }
-  }
-
-  /**
-   * Set element required error.
-   *
-   * @param array $element
-   *   The webform element.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
-   */
-  protected static function setOtherError(array &$element, FormStateInterface $form_state) {
-    if (isset($element['#required_error'])) {
-      $form_state->setError($element['other'], $element['#required_error']);
-    }
-    elseif (isset($element['#title'])) {
-      $form_state->setError($element['other'], t('@name field is required.', ['@name' => $element['#title']]));
-    }
-    else {
-      $form_state->setError($element['other']);
     }
   }
 

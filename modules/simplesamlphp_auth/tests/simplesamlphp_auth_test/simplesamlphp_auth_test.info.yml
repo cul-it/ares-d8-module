@@ -6,8 +6,8 @@ dependencies:
   - user
 hidden: true
 
-# Information added by Drupal.org packaging script on 2017-04-13
-version: '8.x-3.0-rc2'
+# Information added by Drupal.org packaging script on 2018-01-25
+version: '8.x-3.0-rc5'
 core: '8.x'
 project: 'simplesamlphp_auth'
-datestamp: 1492065547
+datestamp: 1516873395
