@@ -3,6 +3,7 @@
 namespace Drupal\ares\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\FormInterface;
 
 /**
  * Provides a basic Ares block
@@ -15,9 +16,9 @@ use Drupal\Core\Block\BlockBase;
 class AresBlock extends BlockBase {
 
   public function build() {
-    $config = $this->getConfiguration();
-    return array(
-      '#markup' => "test",
-    );
+
+    $form = \Drupal::FormBuilder()->getForm('Drupal\ares\Form\AresSearchForm');
+
+    return $form;
   }
 }
