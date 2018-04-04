@@ -4,10 +4,11 @@
       $('#edit-course-select').change(function() {
         var courseId = $('#edit-course-select').val();
         var url = 'http://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
-        console.log("using url", url)
+
         $.getJSON(url, function(result) {
           console.log("got back items", result.reserveItemList);
-          var reserveTable = '<table>';
+          var reserveTable = '<thead><tr><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
+          reserveTable += '<tbody>';
           var odd_even = 'odd';
 
           $.each(result.reserveItemList, function(i, reserve) {
@@ -67,8 +68,9 @@
             reserveTable += '</tr>';
 
           });
-          reserveTable += '</table>';
-          $('#reserve-list').html(reserveTable);
+          reserveTable += '</tbody>';
+          $('#reserve-list').append(reserveTable);
+          $('#reserve-list').tablesorter();
         });
       });
     }

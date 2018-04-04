@@ -3,5 +3,6 @@ ares-selector:
   js:
     js/ares-selector.js: {}
     js/moment.min.js: {}
+    js/jquery.tablesorter.min.js: {}
   dependencies:
     - core/jquery
