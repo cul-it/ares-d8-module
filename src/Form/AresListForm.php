@@ -34,7 +34,7 @@ class aresListForm extends FormBase {
       '#options' => $course_options_hash,
     );
     $form['reserve_list'] = array(
-      '#markup' => '<div id="reserve-list"></div>'
+      '#markup' => '<table id="reserve-list"></table>'
     );
     $form['#attached']['library'][] = 'ares/ares-selector';
 
