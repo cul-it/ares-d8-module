@@ -1,5 +1,8 @@
 ares-selector:
   version: 1.x
+  css:
+    layout:
+      css/ares-layout.css: {}
   js:
     js/ares-selector.js: {}
     js/moment.min.js: {}

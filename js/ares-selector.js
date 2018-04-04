@@ -69,7 +69,7 @@
 
           });
           reserveTable += '</tbody>';
-          $('#reserve-list').append(reserveTable);
+          $('#reserve-list').html(reserveTable);
           $('#reserve-list').tablesorter();
         });
       });
