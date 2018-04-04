@@ -1,3 +1,5 @@
+<?php
+
 namespace Drupal\ares\Controller;
 
 use Drupal\Core\Config\Entity\ConfigEntityListBuilder;

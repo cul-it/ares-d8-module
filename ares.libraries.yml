@@ -1,0 +1,7 @@
+ares-selector:
+  version: 1.x
+  js:
+    js/ares-selector.js: {}
+    js/moment.min.js: {}
+  dependencies:
+    - core/jquery

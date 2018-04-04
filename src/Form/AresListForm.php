@@ -24,13 +24,19 @@ class aresListForm extends FormBase {
 
     $courseJSON = $this->get_courses_json('Music');
     $courses = json_decode($courseJSON, true);
-    $course_array = array_map(array($this, 'mapCourses'), $courses['courseList']);
-    sort($course_array);
+    $course_ids = array_map(array($this, 'mapCourseKeys'), $courses['courseList']);
+    $course_labels = array_map(array($this, 'mapCourses'), $courses['courseList']);
+    $course_options_hash = array_combine($course_ids, $course_labels);
+    asort($course_options_hash);
     $form['course_select'] = array(
       '#type' => 'select',
       '#title' => $this->t('Select course'),
-      '#options' => $course_array,
+      '#options' => $course_options_hash,
     );
+    $form['reserve_list'] = array(
+      '#markup' => '<div id="reserve-list"></div>'
+    );
+    $form['#attached']['library'][] = 'ares/ares-selector';
 
     return $form;
   }
@@ -57,6 +63,10 @@ class aresListForm extends FormBase {
     $result = file_get_contents($url);
 
     return $result;
+  }
+
+  function mapCourseKeys($course) {
+    return $course['id'];
   }
 
   function mapCourses($course) {

@@ -1,3 +1,5 @@
+<?php
+
 namespace Drupal\ares\Form;
 
 use Drupal\Core\Entity\EntityForm;
