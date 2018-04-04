@@ -17,9 +17,11 @@ class AresBlock extends BlockBase {
 
   public function build() {
 
-    $form = \Drupal::FormBuilder()->getForm('Drupal\ares\Form\AresSearchForm');
+    //$form = \Drupal::FormBuilder()->getForm('Drupal\ares\Form\AresSearchForm');
     $listForm = \Drupal::FormBuilder()->getForm('Drupal\ares\Form\AresListForm');
 
-    return array($form, $listForm);
+    //return array($form, $listForm);
+    // FOR NOW, we're omitting the search form ($form)
+    return array($listForm);
   }
 }
