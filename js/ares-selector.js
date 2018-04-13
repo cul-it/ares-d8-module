@@ -7,7 +7,7 @@
 
         $.getJSON(url, function(result) {
           console.log("got back items", result.reserveItemList);
-          var reserveTable = '<thead><tr><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
+          var reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
           reserveTable += '<tbody>';
           var odd_even = 'odd';
 
