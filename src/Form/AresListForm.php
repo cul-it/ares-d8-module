@@ -54,7 +54,7 @@ class aresListForm extends FormBase {
    */
   function get_courses_json($library) {
     //global $courses_url;
-    $courses_url = 'http://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveList.do?output=json&library=';
+    $courses_url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveList.do?output=json&library=';
     // static $ares_courses_json;
     $cid = 'ares_courses_' . $library;
     $url = $courses_url . $library;
