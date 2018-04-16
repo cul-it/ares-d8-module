@@ -1,0 +1,31 @@
+entity.ares.collection:
+  path: '/admin/config/system/ares'
+  defaults:
+    _entity_list: 'ares'
+    _title: 'All libraries'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.ares.add_form:
+  path: '/admin/config/system/ares/add'
+  defaults:
+    _entity_form: 'ares.add'
+    _title: 'Add Ares location'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.ares.edit_form:
+  path: '/admin/config/system/ares/{location}'
+  defaults:
+    _entity_form: 'ares.edit'
+    _title: 'Edit Ares location'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.ares.delete_form:
+  path: '/admin/config/systems/ares/{location}/delete'
+  defaults:
+    _entity_form: 'ares.delete'
+    _title: 'Delete location'
+  requirements:
+    _permission: 'administer site configuration'

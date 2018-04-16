@@ -1,0 +1,6 @@
+name: 'Ares'
+type: module
+description: 'Implementation of Ares module for Drupal 8'
+core: 8.x
+version: 0.1alpha
+package: 'Cornell University Library'

@@ -1,0 +1,16 @@
+ares.ares.*:
+  type: config_entity
+  label: 'Ares location config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    alid:
+      type: int
+      label: 'ALID'
+    block:
+      type: int
+      label: 'Block'
