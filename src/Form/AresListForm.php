@@ -56,7 +56,6 @@ class aresListForm extends FormBase {
 
     $json = \Drupal::cache()->get('ares_course_list')->data;
     if (!$json) {
-      dpm('not cached');
       //global $courses_url;
       $courses_url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveList.do?output=json&library=';
       // static $ares_courses_json;
