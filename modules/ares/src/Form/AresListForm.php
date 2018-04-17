@@ -8,6 +8,7 @@ namespace Drupal\ares\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+
 class aresListForm extends FormBase {
 
   /**
@@ -22,8 +23,7 @@ class aresListForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-    $courseJSON = $this->get_courses_json('Music');
-    $courses = json_decode($courseJSON, true);
+    $courses = $this->get_courses_json('Music');
     $course_ids = array_map(array($this, 'mapCourseKeys'), $courses['courseList']);
     $course_labels = array_map(array($this, 'mapCourses'), $courses['courseList']);
     $course_options_hash = array_combine($course_ids, $course_labels);
@@ -58,11 +58,10 @@ class aresListForm extends FormBase {
     // static $ares_courses_json;
     $cid = 'ares_courses_' . $library;
     $url = $courses_url . $library;
-    // $ares_courses_json = get_and_cache_json($cid, $url);
-    // output_json_string($ares_courses_json);
-    $result = file_get_contents($url);
+    $response = \Drupal::httpClient()->get($url);
+    $json = json_decode((string) $response->getBody(), true);
 
-    return $result;
+    return $json;
   }
 
   function mapCourseKeys($course) {
