@@ -53,13 +53,19 @@ class aresListForm extends FormBase {
    *
    */
   function get_courses_json($library) {
-    //global $courses_url;
-    $courses_url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveList.do?output=json&library=';
-    // static $ares_courses_json;
-    $cid = 'ares_courses_' . $library;
-    $url = $courses_url . $library;
-    $response = \Drupal::httpClient()->get($url, ['verify' => false]);
-    $json = json_decode((string) $response->getBody(), true);
+
+    $json = \Drupal::cache()->get('ares_course_list')->data;
+    if (!$json) {
+      dpm('not cached');
+      //global $courses_url;
+      $courses_url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveList.do?output=json&library=';
+      // static $ares_courses_json;
+      $cid = 'ares_courses_' . $library;
+      $url = $courses_url . $library;
+      $response = \Drupal::httpClient()->get($url, ['verify' => false]);
+      $json = json_decode((string) $response->getBody(), true);
+      \Drupal::cache()->set('ares_course_list', $json, time() + 600); # 10-minute cache time
+    }
 
     return $json;
   }
