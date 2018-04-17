@@ -1,12 +1,21 @@
-(function($, Drupal) {
+(function($, Drupal, drupalSettings) {
   Drupal.behaviors.aresSelectorClick = {
     attach: function(context, settings) {
-      $('#edit-course-select').change(function() {
+      $('#edit-course-select').change(function(preset) {
         var courseId = $('#edit-course-select').val();
         var url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
 
+        // If this is the front-page block, we DON'T want to show the
+        // entire reserve list in situ. Instead, redirect to the course
+        // reserves page
+        if ($('body').hasClass('path-frontpage')) {
+          window.location = "course-reserves?courseId=" + courseId;
+        }
+
+        $('#reserve-list').html('Loading reserve list ...');
+
         $.getJSON(url, function(result) {
-          console.log("got back items", result.reserveItemList);
+          // console.log("got back items", result.reserveItemList);
           var reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
           reserveTable += '<tbody>';
           var odd_even = 'odd';
@@ -71,8 +80,21 @@
           reserveTable += '</tbody>';
           $('#reserve-list').html(reserveTable);
           $('#reserve-list').tablesorter();
+
         });
       });
+      if (!$('body').hasClass('path-frontpage')) {
+        // If this is the course reserves page, look to see whether a courseId is
+        // specified in the URL. If so, set the select list to that value and
+        // trigger the onChange handler. (This is used by the front-page block
+        // as a redirect method.)
+        var urlParams = new URLSearchParams(window.location.search);
+        var courseId = urlParams.get('courseId');
+        if (courseId) {
+          $('#edit-course-select').val(courseId);
+          $('#edit-course-select').change();
+        }
+      }
     }
   };
 })(jQuery, Drupal, drupalSettings);
