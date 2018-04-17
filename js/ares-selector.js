@@ -3,7 +3,7 @@
     attach: function(context, settings) {
       $('#edit-course-select').change(function() {
         var courseId = $('#edit-course-select').val();
-        var url = 'http://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
+        var url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
 
         $.getJSON(url, function(result) {
           console.log("got back items", result.reserveItemList);
