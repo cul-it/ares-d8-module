@@ -12,6 +12,8 @@
           window.location = "course-reserves?courseId=" + courseId;
         }
 
+        $('#reserve-list').html('Loading reserve list ...');
+
         $.getJSON(url, function(result) {
           // console.log("got back items", result.reserveItemList);
           var reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
@@ -87,8 +89,11 @@
         // trigger the onChange handler. (This is used by the front-page block
         // as a redirect method.)
         var urlParams = new URLSearchParams(window.location.search);
-        $('#edit-course-select').val(urlParams.get('courseId'));
-        $('#edit-course-select').change();
+        var courseId = urlParams.get('courseId');
+        if (courseId) {
+          $('#edit-course-select').val(courseId);
+          $('#edit-course-select').change();
+        }
       }
     }
   };
