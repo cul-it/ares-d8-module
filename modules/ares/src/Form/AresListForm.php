@@ -58,7 +58,7 @@ class aresListForm extends FormBase {
     // static $ares_courses_json;
     $cid = 'ares_courses_' . $library;
     $url = $courses_url . $library;
-    $response = \Drupal::httpClient()->get($url);
+    $response = \Drupal::httpClient()->get($url, ['verify' => false]);
     $json = json_decode((string) $response->getBody(), true);
 
     return $json;
