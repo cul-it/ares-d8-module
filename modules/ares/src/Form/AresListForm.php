@@ -28,6 +28,7 @@ class aresListForm extends FormBase {
     $course_labels = array_map(array($this, 'mapCourses'), $courses['courseList']);
     $course_options_hash = array_combine($course_ids, $course_labels);
     asort($course_options_hash);
+    $course_options_hash = array(0 => '') + $course_options_hash;
     $form['course_select'] = array(
       '#type' => 'select',
       '#title' => $this->t('Select course'),
