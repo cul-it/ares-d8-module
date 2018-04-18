@@ -24,7 +24,7 @@
           $.each(result.reserveItemList, function(i, reserve) {
             ((i+1)%2) == 0  ? odd_even = 'even' : odd_even = 'odd';
             reserveTable += '<tr class="' + odd_even + '">';
-
+            console.log("reserve", reserve);
             // TITLE AND PAGES
             reserveTable += '   <td class="ares-title">';
             if (reserve.articleTitle != '' && reserve.articleTitle != '?') {
@@ -58,12 +58,11 @@
 
             // DUE DATE
             // Convert date format to MM/DD/YYYY HH:MM
-            reserve.dueDate = reserve.dueDate.replace(/(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2}).*/, '$2/$3/$1 $4');
-            var formattableDate = moment(reserve.dueDate);
+            //reserve.dueDate = reserve.dueDate.replace(/(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2}).*/, '$2/$3/$1 $4');
+            var formattableDate = moment(reserve.dueDate, 'YYYY-M-D H:m');
             var formattedDate;
-
             if (formattableDate.isValid())
-              formattedDate = moment(reserve.dueDate).format('ddd, M/D/YY [ &nbsp;&nbsp; ] h:mm A');
+              formattedDate = formattableDate.format('ddd, M/D/YY [ &nbsp;&nbsp; ] h:mm A');
             else
               // If formattableDate is *not* a valid date, then it's probably a status
               // message like 'Available' that should be passed through without alteration.
