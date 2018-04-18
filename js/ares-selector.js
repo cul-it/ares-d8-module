@@ -10,6 +10,7 @@
         // reserves page
         if ($('body').hasClass('path-frontpage')) {
           window.location = "course-reserves?courseId=" + courseId;
+          return;
         }
 
         $('#reserve-list').html('Loading reserve list ...');
