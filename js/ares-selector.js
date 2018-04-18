@@ -24,7 +24,6 @@
           $.each(result.reserveItemList, function(i, reserve) {
             ((i+1)%2) == 0  ? odd_even = 'even' : odd_even = 'odd';
             reserveTable += '<tr class="' + odd_even + '">';
-            console.log("reserve", reserve);
             // TITLE AND PAGES
             reserveTable += '   <td class="ares-title">';
             if (reserve.articleTitle != '' && reserve.articleTitle != '?') {
