@@ -44,7 +44,7 @@
             reserveTable += '   <td class="ares-author"><p>' + reserve.author + '</p></td>';
 
             // BLACKBOARD LINK OR LIBRARY AND CALLNUMBER
-            reserveTable += '   <td class="ares-location-complete">';
+            reserveTable += '   <td class="ares-location-complete" style="width:10%">';
             if (reserve.status.toUpperCase().indexOf("ELECTRONIC") != -1) {
               reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
             } else {
@@ -68,9 +68,9 @@
               formattedDate = reserve.dueDate;
 
             if (reserve.status.toUpperCase().indexOf("ELECTRONIC") == -1) {
-              reserveTable += '   <td class="ares-status"><span class="available">' + formattedDate + '</span></td>';
+              reserveTable += '   <td class="ares-status" style="width:10%"><span class="available">' + formattedDate + '</span></td>';
             } else {
-              reserveTable += '   <td class="ares-status"></td>';
+              reserveTable += '   <td class="ares-status" style="width:10%"></td>';
             }
 
             reserveTable += '</tr>';
