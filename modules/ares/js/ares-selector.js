@@ -17,66 +17,73 @@
 
         $.getJSON(url, function(result) {
           // console.log("got back items", result.reserveItemList);
-          var reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
-          reserveTable += '<tbody>';
-          var odd_even = 'odd';
+          var reserveTable;
+          if (result) {
+            reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';
+            reserveTable += '<tbody>';
+            var odd_even = 'odd';
 
-          $.each(result.reserveItemList, function(i, reserve) {
-            ((i+1)%2) == 0  ? odd_even = 'even' : odd_even = 'odd';
-            reserveTable += '<tr class="' + odd_even + '">';
-            // TITLE AND PAGES
-            reserveTable += '   <td class="ares-title" style="width:50%">';
-            if (reserve.articleTitle != '' && reserve.articleTitle != '?') {
-              reserveTable +=  '<p class="title"><strong>' + reserve.title + '</strong></p>';
-              reserveTable +=  '<p class="article-title"><em>' + reserve.articleTitle + '</em></p>';
-            } else {
-              reserveTable +=  '<p class="title"><strong>' + reserve.title + '</strong></p>';
-            }
-
-            // Originally this showed pages for all formats, but it was requested
-            // by Wendy and Troy to limit it to articles and chapters only
-            if ((reserve.itemFormat == 'Article' || reserve.itemFormat == 'BookChapter') && (reserve.pages != '' && reserve.pages != '?')) {
-              reserveTable +=  '<p class="pages">pp. ' + reserve.pages + '</p>';
-            }
-            reserveTable += '</td>';
-
-            // AUTHOR
-            reserveTable += '   <td class="ares-author" style="width:20%"><p>' + reserve.author + '</p></td>';
-
-            // BLACKBOARD LINK OR LIBRARY AND CALLNUMBER
-            reserveTable += '   <td class="ares-location-complete" style="width:15%">';
-            if (reserve.status.toUpperCase().indexOf("ELECTRONIC") != -1) {
-              reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
-            } else {
-              if (reserve.location != '' && reserve.location != '?') {
-                reserveTable += '<p class="ares-location">' + reserve.location + '&nbsp;</p>';
+            $.each(result.reserveItemList, function(i, reserve) {
+              ((i+1)%2) == 0  ? odd_even = 'even' : odd_even = 'odd';
+              reserveTable += '<tr class="' + odd_even + '">';
+              // TITLE AND PAGES
+              reserveTable += '   <td class="ares-title" style="width:50%">';
+              if (reserve.articleTitle != '' && reserve.articleTitle != '?') {
+                reserveTable +=  '<p class="title"><strong>' + reserve.title + '</strong></p>';
+                reserveTable +=  '<p class="article-title"><em>' + reserve.articleTitle + '</em></p>';
+              } else {
+                reserveTable +=  '<p class="title"><strong>' + reserve.title + '</strong></p>';
               }
-              reserveTable += '<p class="ares-callnumber">' + reserve.callnumber + '</p></td>';
-            }
-            reserveTable += '</td>';
 
-            // DUE DATE
-            // Convert date format to MM/DD/YYYY HH:MM
-            //reserve.dueDate = reserve.dueDate.replace(/(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2}).*/, '$2/$3/$1 $4');
-            var formattableDate = moment(reserve.dueDate, 'YYYY-M-D H:m');
-            var formattedDate;
-            if (formattableDate.isValid())
-              formattedDate = formattableDate.format('ddd, M/D/YY [ &nbsp;&nbsp; ] h:mm A');
-            else
-              // If formattableDate is *not* a valid date, then it's probably a status
-              // message like 'Available' that should be passed through without alteration.
-              formattedDate = reserve.dueDate;
+              // Originally this showed pages for all formats, but it was requested
+              // by Wendy and Troy to limit it to articles and chapters only
+              if ((reserve.itemFormat == 'Article' || reserve.itemFormat == 'BookChapter') && (reserve.pages != '' && reserve.pages != '?')) {
+                reserveTable +=  '<p class="pages">pp. ' + reserve.pages + '</p>';
+              }
+              reserveTable += '</td>';
 
-            if (reserve.status.toUpperCase().indexOf("ELECTRONIC") == -1) {
-              reserveTable += '   <td class="ares-status" style="width:15%"><span class="available">' + formattedDate + '</span></td>';
-            } else {
-              reserveTable += '   <td class="ares-status" style="width:15%"></td>';
-            }
+              // AUTHOR
+              reserveTable += '   <td class="ares-author" style="width:20%"><p>' + reserve.author + '</p></td>';
 
-            reserveTable += '</tr>';
+              // BLACKBOARD LINK OR LIBRARY AND CALLNUMBER
+              reserveTable += '   <td class="ares-location-complete" style="width:15%">';
+              if (reserve.status.toUpperCase().indexOf("ELECTRONIC") != -1) {
+                reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
+              } else {
+                if (reserve.location != '' && reserve.location != '?') {
+                  reserveTable += '<p class="ares-location">' + reserve.location + '&nbsp;</p>';
+                }
+                reserveTable += '<p class="ares-callnumber">' + reserve.callnumber + '</p></td>';
+              }
+              reserveTable += '</td>';
 
-          });
-          reserveTable += '</tbody>';
+              // DUE DATE
+              // Convert date format to MM/DD/YYYY HH:MM
+              //reserve.dueDate = reserve.dueDate.replace(/(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2}).*/, '$2/$3/$1 $4');
+              var formattableDate = moment(reserve.dueDate, 'YYYY-M-D H:m');
+              var formattedDate;
+              if (formattableDate.isValid())
+                formattedDate = formattableDate.format('ddd, M/D/YY [ &nbsp;&nbsp; ] h:mm A');
+              else
+                // If formattableDate is *not* a valid date, then it's probably a status
+                // message like 'Available' that should be passed through without alteration.
+                formattedDate = reserve.dueDate;
+
+              if (reserve.status.toUpperCase().indexOf("ELECTRONIC") == -1) {
+                reserveTable += '   <td class="ares-status" style="width:15%"><span class="available">' + formattedDate + '</span></td>';
+              } else {
+                reserveTable += '   <td class="ares-status" style="width:15%"></td>';
+              }
+
+              reserveTable += '</tr>';
+
+            });
+            reserveTable += '</tbody>';
+          }
+          else {
+            reserveTable = '<p>No reserve items were found</p>';
+          }
+
           $('#reserve-list').html(reserveTable);
           $('#reserve-list').tablesorter();
 
