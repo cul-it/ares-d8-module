@@ -25,7 +25,7 @@
             ((i+1)%2) == 0  ? odd_even = 'even' : odd_even = 'odd';
             reserveTable += '<tr class="' + odd_even + '">';
             // TITLE AND PAGES
-            reserveTable += '   <td class="ares-title">';
+            reserveTable += '   <td class="ares-title" style="width:50%">';
             if (reserve.articleTitle != '' && reserve.articleTitle != '?') {
               reserveTable +=  '<p class="title"><strong>' + reserve.title + '</strong></p>';
               reserveTable +=  '<p class="article-title"><em>' + reserve.articleTitle + '</em></p>';
@@ -41,10 +41,10 @@
             reserveTable += '</td>';
 
             // AUTHOR
-            reserveTable += '   <td class="ares-author"><p>' + reserve.author + '</p></td>';
+            reserveTable += '   <td class="ares-author" style="width:20%"><p>' + reserve.author + '</p></td>';
 
             // BLACKBOARD LINK OR LIBRARY AND CALLNUMBER
-            reserveTable += '   <td class="ares-location-complete" style="width:10%">';
+            reserveTable += '   <td class="ares-location-complete" style="width:15%">';
             if (reserve.status.toUpperCase().indexOf("ELECTRONIC") != -1) {
               reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
             } else {
@@ -68,9 +68,9 @@
               formattedDate = reserve.dueDate;
 
             if (reserve.status.toUpperCase().indexOf("ELECTRONIC") == -1) {
-              reserveTable += '   <td class="ares-status" style="width:10%"><span class="available">' + formattedDate + '</span></td>';
+              reserveTable += '   <td class="ares-status" style="width:15%"><span class="available">' + formattedDate + '</span></td>';
             } else {
-              reserveTable += '   <td class="ares-status" style="width:10%"></td>';
+              reserveTable += '   <td class="ares-status" style="width:15%"></td>';
             }
 
             reserveTable += '</tr>';
