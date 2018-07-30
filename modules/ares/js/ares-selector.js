@@ -16,7 +16,7 @@
         $('#reserve-list').html('Loading reserve list ...');
 
         $.getJSON(url, function(result) {
-          // console.log("got back items", result.reserveItemList);
+          console.log("got back items", result.reserveItemList);
           var reserveTable;
           if (result.reserveItemList) {
             reserveTable = '<thead><tr class="header"><th>Item</th><th>Author</th><th>Call number</th><th>Due back</th></tr></thead>';

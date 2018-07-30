@@ -39,6 +39,6 @@ background-color: #8dbdd8;
 	font-size: smaller;
 }
 
-table#reserve-list {
-	border-spacing: 5px;
+table#reserve-list td {
+	padding-right: 5px;
 }
