@@ -38,3 +38,7 @@ background-color: #8dbdd8;
 	font-weight: normal;
 	font-size: smaller;
 }
+
+table#reserve-list {
+	border-spacing: 5px;
+}
