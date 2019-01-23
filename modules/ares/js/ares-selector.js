@@ -3,7 +3,7 @@
     attach: function(context, settings) {
       $('#edit-course-select').change(function(preset) {
         var courseId = $('#edit-course-select').val();
-        var url = 'https://mannservices.mannlib.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
+        var url = 'https://api.library.cornell.edu/LibServices/showCourseReserveItemInfo.do?output=json&courseid=' + courseId;
 
         // If this is the front-page block, we DON'T want to show the
         // entire reserve list in situ. Instead, redirect to the course
