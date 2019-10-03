@@ -46,7 +46,8 @@
             // BLACKBOARD LINK OR LIBRARY AND CALLNUMBER
             reserveTable += '   <td class="ares-location-complete" style="width:10%">';
             if (reserve.status.toUpperCase().indexOf("ELECTRONIC") != -1) {
-              reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
+              reserveTable += '<p class="electronic">Electronic Access: Find electronic reserve readings in the Blackboard or Canvas page for your course.</p>';
+              // reserveTable += '<p class="electronic">Electronic Access: <a href="http://blackboard.cornell.edu/#aresid=' + reserve.id + '">Click here to find electronic reserve readings in Blackboard</a></p>';
             } else {
               if (reserve.location != '' && reserve.location != '?') {
                 reserveTable += '<p class="ares-location">' + reserve.location + '&nbsp;</p>';
